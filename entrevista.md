@@ -29,4 +29,4 @@
 
 **Letícia** - Atualmente como divulga o seu trabalho?
 
-**Rosane** - pelas redes sociais, WhatsApp, Instagram e panfletos distribuídos por meu marido que trabalha com o público
+**Rosane** - Pelas redes sociais, WhatsApp, Instagram e panfletos distribuídos por meu marido que trabalha com o público
