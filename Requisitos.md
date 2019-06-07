@@ -45,7 +45,7 @@ Para isto, o cliente já deve estar previamente cadastrado.
 
 ### RF 03
 
-Realizar encomendas
+Realizar encomendas.
 
 Para isto, o cliente já deve estar cadastrado.
 
