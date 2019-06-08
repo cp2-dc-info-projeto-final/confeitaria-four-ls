@@ -3,7 +3,7 @@
 # Sumário
 - [CDU 01 – Fazer cadastro](#cdu-01---fazer-cadastro)
 - [CDU 02 – Escolher produto](#cdu-02---escolher-produto)
-- [CDU 03 – Finalizar Compra](#cdu-03---finalizar-compra)
+- [CDU 03 – Finalizar pedido](#cdu-03---finalizar-pedido)
 - [CDU 04 – Alterar pedido](#cdu-04---alterar-pedido)
 - [CDU 05 – Cancelar pedido](#cdu-05---cancelar-pedido)
 - [CDU 06 – Fazer um comentário](#cdu-06---fazer-um-comentário)
