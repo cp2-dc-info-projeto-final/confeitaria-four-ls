@@ -32,7 +32,7 @@ CREATE TABLE contato(
     id_contato INT,
     num_contato VARCHAR (11),
     endereco_cont VARCHAR (50),
-    emanil-cont VARCHAR (50),
+    emanil_cont VARCHAR (50),
     PRIMARY KEY(id_contato)
 );
 
@@ -60,7 +60,7 @@ CREATE TABLE promocao(
     data_in DATE,
     data_fim DATE,
     desconto FLOAT,
-    PRIMARY KEY (id_promo)
+    PRIMARY KEY(id_promo)
 
 );
 
@@ -69,6 +69,6 @@ CREATE TABLE carrinho(
     id_carrinho INT,
     id_produto INT,
     valor_total FLOAT,
-    PRIMARY KEY (id_carrinho),
-    FOREIGN KEY (id_produto)
+    PRIMARY KEY(id_carrinho),
+    FOREIGN KEY(id_produto)
 );
