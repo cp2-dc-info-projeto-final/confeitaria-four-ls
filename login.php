@@ -2,7 +2,7 @@
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
-$connect = mysql_connect('nome_do_servidor','nome_de_usuario','senha');
+$connect = mysql_connect("localhost", "root", "", "confeitariafourls");
 $db = mysql_select_db('confeitariafourls');
   if (isset($entrar)) {
            
