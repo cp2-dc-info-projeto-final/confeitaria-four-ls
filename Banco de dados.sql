@@ -12,7 +12,6 @@ telefone varchar (10),
 endereco varchar (100),
 cidade varchar(50),
 bairro varchar (20),
-login varchar (20),
 senha varchar (20),
 PRIMARY KEY(id_cliente)
 
