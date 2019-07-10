@@ -1,12 +1,12 @@
 <?php 
-$login = $_POST["login"];
-$entrar = $_POST["entrar"];
-$senha = md5($_POST["senha"]);
+$login = $_POST['login'];
+$entrar = $_POST['entrar'];
+$senha = md5($_POST['senha']);
 $connect = mysql_connect("localhost", "root", "", "confeitariafourls");
 $db = mysql_select_db('confeitariafourls');
   if (isset($entrar)) {
            
-    $verifica = mysql_query("SELECT * FROM cliente WHERE login = 
+    $verifica = mysql_query("SELECT * FROM cliente WHERE 'login' = 
     '$login' AND senha = '$senha'") or die("erro ao selecionar");
       if (mysql_num_rows($verifica)<=0){
         echo"<script language='javascript' type='text/javascript'>
