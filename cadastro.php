@@ -4,7 +4,7 @@
     $senha = $_POST["senha"];
     $confirmaSenha = $_POST["confirmaSenha"];
     $sexo = $_POST["sexo"];
-	$telefone = $sexo = $_POST["telefone"];
+	$telefone = $_POST["telefone"];
 	$cidade = $_POST["cidade"];
 	$endereco = $_POST["endereco"];
     session_start();
@@ -30,7 +30,7 @@
         header("Location: formCadastro.php");
         exit();
     }
-    $sql = "INSERT INTO cliente (nome, email, senha, sexo, telefone, cidade, endereço)
+    $sql = "INSERT INTO cliente (nome, email, senha, sexo, telefone, cidade, endereco)
     VALUES ('$nome', '$email', '$senha','$sexo','$telefone','$cidade', '$endereco')";
     if(mysqli_query($connection, $sql)){
         session_unset();
