@@ -1,21 +1,40 @@
-<?php 
-$login = $_POST['login'];
-$entrar = $_POST['entrar'];
-$senha = md5($_POST['senha']);
-$connect = mysql_connect("localhost", "root", "", "confeitariafourls");
-$db = mysql_select_db('confeitariafourls');
-  if (isset($entrar)) {
-           
-    $verifica = mysql_query("SELECT * FROM cliente WHERE 'login' = 
-    '$login' AND senha = '$senha'") or die("erro ao selecionar");
-      if (mysql_num_rows($verifica)<=0){
-        echo"<script language='javascript' type='text/javascript'>
-        alert('Login e/ou senha incorretos');window.location
-        .href='login.html';</script>";
-        die();
-      }else{
-        setcookie("login",$login);
-        header("Location:index.php");
-      }
-  }
+<?php
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    $connection = mysqli_connect("localhost", "root", "", "confeitariafourls");
+ 
+    // Check connection
+    if($connection === false){
+        die("Erro" . mysqli_connect_error());
+    }
+    session_start();
+    
+    $sql = "SELECT senha,nome FROM usuario WHERE email='$email'";
+    $result = mysqli_query($connection, $sql);
+    $erro = "";
+    
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            $hash = $row["senha"];
+            if (password_verify($senha, $hash)) {
+                session_unset();
+                $_SESSION["nome"] = $row["nome"]; 
+                header("Location: home.php");
+                exit();
+            } else {
+                $erro = "Senha incorreta";        
+                $_SESSION["erro"] = $erro;
+                header("Location: login.php");
+                exit();
+            }
+        }
+    } else {
+        $erro = "Login inexistente";
+        $_SESSION["erro"] = $erro;
+        header("Location: login.php");
+        exit();
+    }        
+    mysqli_close($connection);
+    
 ?>
