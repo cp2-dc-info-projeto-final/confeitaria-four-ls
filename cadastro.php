@@ -11,7 +11,7 @@
     if ($senha != $confirmaSenha) {    
         $erro = "As senhas não são as mesmas";        
         $_SESSION["erro"] = $erro;
-        header("Location: formCadastro.php");
+        header("Location: cadastro.php");
         exit();
     }
     $hash = password_hash($senha, PASSWORD_DEFAULT);
@@ -27,14 +27,14 @@
     if (mysqli_num_rows($result) > 0) {
         $erro = "E-mail indisponível";        
         $_SESSION["erro"] = $erro;
-        header("Location: formCadastro.php");
+        header("Location: cadastro.php");
         exit();
     }
     $sql = "INSERT INTO cliente (nome, email, senha, sexo, telefone, cidade, endereco)
     VALUES ('$nome', '$email', '$senha','$sexo','$telefone','$cidade', '$endereco')";
     if(mysqli_query($connection, $sql)){
         session_unset();
-        header("Location: formLogin.php");
+        header("Location: login.php");
         exit();
     } else{
         die("Erro $sql. " . mysqli_error($connection));
