@@ -3,7 +3,7 @@ USE confeitariafourls;
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 id_usuario INT,
-nome INT,
+nome VARCHAR (50),
 senha VARCHAR(20),
 PRIMARY KEY(id_usuario)
 );
@@ -33,6 +33,7 @@ senha VARCHAR(50),
 PRIMARY KEY(id_administrador),
 FOREIGN KEY(id_administrador) REFERENCES usuario (id_usuario)
 );
+
 
 DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
