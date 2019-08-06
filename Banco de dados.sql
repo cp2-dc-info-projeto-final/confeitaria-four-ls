@@ -1,16 +1,14 @@
 USE confeitariafourls;
-
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
-id_usuario INT,
+CPF VARCHAR(11),
 nome VARCHAR (50),
 senha VARCHAR(20),
-PRIMARY KEY(id_usuario)
+PRIMARY KEY(CPF)
 );
 DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
-id_cliente INT,
-CPF VARCHAR(20) ,
+CPF_cliente VARCHAR (11),
 nome VARCHAR (50),
 email VARCHAR (50),
 sexo VARCHAR (10),
@@ -20,18 +18,17 @@ endereco VARCHAR (100),
 cidade VARCHAR (50),
 bairro VARCHAR (20),
 senha VARCHAR (20),
-PRIMARY KEY(id_cliente),
-FOREIGN KEY(id_cliente) REFERENCES usuario (id_usuario)
+PRIMARY KEY(CPF_cliente),
+FOREIGN KEY(CPF_cliente)REFERENCES usuario(CPF)
 );
 
 DROP TABLE IF EXISTS administrador;
 CREATE TABLE administrador(
-id_administrador INT,
-id_usuario INT,
+CPF_admin VARCHAR(11),
 nome VARCHAR(50),
 senha VARCHAR(50),
-PRIMARY KEY(id_administrador),
-FOREIGN KEY(id_administrador) REFERENCES usuario (id_usuario)
+PRIMARY KEY(CPF_admin),
+FOREIGN KEY(CPF_admin) REFERENCES usuario(CPF)
 );
 
 
@@ -44,11 +41,12 @@ tamanho INT,
 preco FLOAT,
 PRIMARY KEY(id_produto)
 );
+
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
-id_cliente INT,
+CPF_cliente INT,
 id_produto INT,
-FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente),
+FOREIGN KEY (CPF_cliente) REFERENCES cliente (CPF_cliente),
 FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );
 
