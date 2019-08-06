@@ -8,6 +8,7 @@
     $cidade = $_POST["cidade"];
     $endereco = $_POST["endereco"];
     $bairro = $_POST["bairro"];
+    $CPF = $_POST["CPF"];
     session_start();
     
     if ($senha != $confirmaSenha) {    
@@ -22,9 +23,12 @@
     if($connection === false){
         die("Erro" . mysqli_connect_error());
     }
-
-    $sql = "INSERT INTO usuario (id_usuario,nome,senha)
-    VALUES ('$id_usuario', '$nome', '$senha')";//possui id_usuario
+    $sql = "SELECT id_usuario FROM cliente";
+    $result = mysqli_query($connection, $sql);
+    $erro = "";
+    
+    $sql = "INSERT INTO usuario (CPF,nome,senha)
+    VALUES ('$CPF', '$nome', '$senha')";
     if(mysqli_query($connection, $sql)){
     session_unset();
     header("Location: formulario-login.html");
@@ -32,9 +36,6 @@
     } else{
     die("Erro $sql. " . mysqli_error($connection));
     } 
-    $sql = "SELECT id_usuario FROM cliente WHERE email='$email'";
-    $result = mysqli_query($connection, $sql);
-    $erro = "";
     
     if (mysqli_num_rows($result) > 0) {
         $erro = "E-mail indisponível";        
@@ -44,8 +45,11 @@
     }else{
         die("Erro $sql. " . mysqli_error($connection));
     }
-    $sql = "INSERT INTO cliente (id_cliente, nome, email, senha, sexo, telefone, cidade, endereco,bairro)
-    VALUES ('$id_cliente','$nome', '$email', '$senha','$sexo','$telefone','$cidade', '$endereco','$bairro')";
+    $sql = "SELECT id_cliente FROM cliente";
+    $result = mysqli_query($connection, $sql);
+    $erro = "";
+    $sql = "INSERT INTO cliente (CPF_cliente, nome, email, senha, sexo, telefone, cidade, endereco,bairro)
+    VALUES ($CPF_cliente,'$nome', '$email','$sexo','$telefone','$cidade', '$endereco','$bairro')";
     if(mysqli_query($connection, $sql)){
         session_unset();
         header("Location: formulario-login.html");
@@ -53,9 +57,8 @@
     }else{
         die("Erro $sql. " . mysqli_error($connection));
     }
-
-        $sql = "INSERT INTO administrador (id_administrador, nome, senha) VALUES
-            ('$id_administrador','$nome','$senha')";
+        $sql = "INSERT INTO administrador (CPF_admin, nome, senha) VALUES
+            ('$CPF_admin','$nome','$senha')";
     if(mysqli_query($connection, $sql)){
         session_unset();
         header("Location: formulario-login.html");
