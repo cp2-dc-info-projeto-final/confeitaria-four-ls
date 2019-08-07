@@ -2,6 +2,7 @@ USE confeitariafourls;
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 CPF VARCHAR(11),
+id_usuario 
 nome VARCHAR (50),
 senha VARCHAR(20),
 PRIMARY KEY(CPF)
