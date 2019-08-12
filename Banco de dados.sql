@@ -1,18 +1,18 @@
 USE confeitariafourls;
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
-CPF VARCHAR(11),
+id INT,
 <<<<<<< HEAD
 id_usuario 
 =======
 >>>>>>> 64cfd535fee3bdef95bf1327333e973cf4f31ebc
 nome VARCHAR (50),
 senha VARCHAR(20),
-PRIMARY KEY(CPF)
+PRIMARY KEY(id)
 );
 DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
-CPF_cliente VARCHAR (11),
+id_cliente INT,
 nome VARCHAR (50),
 email VARCHAR (50),
 sexo VARCHAR (10),
@@ -22,17 +22,17 @@ endereco VARCHAR (100),
 cidade VARCHAR (50),
 bairro VARCHAR (20),
 senha VARCHAR (20),
-PRIMARY KEY(CPF_cliente),
-FOREIGN KEY(CPF_cliente)REFERENCES usuario(CPF)
+PRIMARY KEY(id_cliente),
+FOREIGN KEY(id_cliente)REFERENCES usuario(id)
 );
 
 DROP TABLE IF EXISTS administrador;
 CREATE TABLE administrador(
-CPF_admin VARCHAR(11),
+id_admin INT,
 nome VARCHAR(50),
 senha VARCHAR(50),
-PRIMARY KEY(CPF_admin),
-FOREIGN KEY(CPF_admin) REFERENCES usuario(CPF)
+PRIMARY KEY(id_admin),
+FOREIGN KEY(id_admin) REFERENCES usuario(id)
 );
 
 
@@ -48,9 +48,9 @@ PRIMARY KEY(id_produto)
 
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
-CPF_cliente INT,
+id_cliente INT,
 id_produto INT,
-FOREIGN KEY (CPF_cliente) REFERENCES cliente (CPF_cliente),
+FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente),
 FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );
 
