@@ -13,7 +13,7 @@
     } else {
         $erro = "Login ou senha incorreta";        
         $_SESSION["erro"] = $erro;
-        header("Location: formulario-login.html");
+        header("Location: loginview.html");
         exit();
     }    
 ?>
