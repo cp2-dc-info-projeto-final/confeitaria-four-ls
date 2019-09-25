@@ -8,7 +8,7 @@
     {
         session_start();   
         $_SESSION["nome"] = $row["nome"]; 
-        header("Location: home.php");
+        header("Location: paginacliente.html");
         exit();
     } else {
         $erro = "Login ou senha incorreta";        
