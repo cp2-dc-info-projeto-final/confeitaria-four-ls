@@ -15,7 +15,7 @@
     if ($senha != $confirma_senha) {    
         $erro = "As senhas não são as mesmas";        
         $_SESSION["erro"] = $erro;
-        header("Location: formulario-cadastro.html");
+        header("Location:cadastroview.html");
         exit();
     } else{
 
@@ -26,7 +26,7 @@
         } else {
             $erro = "E-mail indisponível";        
             $_SESSION["erro"] = $erro;
-            header("Location: formulario-cadastro.html");
+            header("Location: cadastroview.html");
             exit();
         }
 
