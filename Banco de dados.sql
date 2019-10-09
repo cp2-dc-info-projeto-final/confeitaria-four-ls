@@ -81,8 +81,8 @@ FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
 );
 DROP TABLE IF EXISTS produto_venda;
 CREATE TABLE produto_venda(
-id_venda INT NOT NULL PRIMARY KEY,
-id_produto INT NOT NULL PRIMARY KEY,
+id_venda INT,
+id_produto INT,
 qtd INT,
 FOREIGN KEY(id_produto) REFERENCES produto(id_produto),
 FOREIGN KEY(id_venda) REFERENCES venda(id_venda)
