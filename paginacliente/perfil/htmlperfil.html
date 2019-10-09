@@ -13,14 +13,14 @@
   <!-- Custom fonts for this theme (botar link css quando estiver pronto)-->
   <link href="cssperfil.css" rel="stylesheet" type="text/css">
 
-  <!-- Theme CSS --
+  <!-- Theme CSS -->
   <link href="cssperfil.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-  <-- Navigation -->
+
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <img class="logo" src="logo.png" height="100" width="100"> 
@@ -38,23 +38,58 @@
           </li>
 		   <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#meucarrinho">Meu carrinho</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3" href="loginview.html">Sair</a>
-          </li>
+       </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Masthead -->
-  <header class="masthead bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column"> </div>
-  </header>
-  <div class="bar bar-expand-lg bar-dark bg-primary" id="sidenav" >
-    <img class="logo" src="user.png" height="150" width="150">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+<div class="container" >
+<div class="content"> 
+<div id="cadastro">
+	<h1>Editar minhas informações</h1>
+    <form name="0.1_cadastro" method="post" action="cadastroCTRL.php">
+        <p>
+		<label for="nome">Nome:</label><br>
+          <input id="nome" name="nome" required="required" type="text" maxlength="60">
+        </p>
+        <p>
+        <label for="tel">Telefone:</label><br>
+          <input id="tel" name="telefone" required="required" type="text"><br>
+              <span>Apenas números</span>
+        </p>
+        <p>
+        <label for="ender">Endereço:</label><br>
+          <input id="ender" name="endereco" required="required"type="text" maxlength="70">
+        </p>
+        <p>
+        <label for="cidade">Cidade:</label><br>
+          <input id="cidade" name="cidade" required="required" type="text" maxlength="20">
+        </p>
+        <p>
+        <label for="bairro">Bairro:</label><br>
+          <input id="bairro" name="bairro" required="required" type="text" maxlength="20">
+        </p>
+        <p>
+            <input name="cadastrar" required="required" type="submit" value="Concluir edição"> 
+            <br>
+            <input name="limpar" required="required" type="reset" value="Limpar Campos preenchidos!">
+            <br>
+            <input name="sair" type="button" href="paginainicial.html" value="Sair da conta">
+        </p>
+    </form>
+    </div>
+	</div>
+	</div>
+	</html>
     
-  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Minhasinfo">Minhas informações</a>
-  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#editinfo">Editar informações</a>
- 
-</div>
