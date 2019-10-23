@@ -18,7 +18,14 @@
                 $hash = $row["senha"];          
             }
         }
-        mysqli_close($connection);
-   }
+        if (password_verify($senha, $hash)) {
+            return true;
+        }else{
+            return false;
+        }
+
+
     
+          mysqli_close($connection);
+    }    
 ?>

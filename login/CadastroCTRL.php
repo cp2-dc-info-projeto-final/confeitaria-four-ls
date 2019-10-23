@@ -21,7 +21,7 @@
 
         if (fazercadastro($nome, $email, $senha, $confirma_senha, $sexo, $telefone, $cidade, $endereco, $bairro)) {
             session_unset();
-            header("Location: loginview.html");
+            header("Location: loginview.php");
             exit();
         } else {
             $erro = "E-mail indisponível";        

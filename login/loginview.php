@@ -27,6 +27,13 @@
                     
                         <p> 
                             <input type="submit" value="Entrar" /> 
+                            <?php
+                            session_start();
+                            if(array_key_exists('erro', $_SESSION) == true){
+                                $erro = $_SESSION["erro"];
+                                echo "<br><b>$erro</b>";
+                            }
+                            ?>
                         </p>
                             
                         <div class="link">
@@ -35,6 +42,7 @@
                         </p>      
 								<a id="id_cliente" href="cadastroview.html">Cadastre-se agora mesmo</a>
                         </div>
+                        
                     </form>
             </div>
         </div>
