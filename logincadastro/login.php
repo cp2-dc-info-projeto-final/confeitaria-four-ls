@@ -1,3 +1,4 @@
+
 <?php
    
    function fazerlogin($email, $senha) {
@@ -18,13 +19,7 @@
                 $hash = $row["senha"];          
             }
         }
-        if (password_verify($senha, $hash)) {
-            return true;
-        }else{
-            return false;
-        }
-
+        mysqli_close($connection);
+   }
     
-          mysqli_close($connection);
-    }    
 ?>
