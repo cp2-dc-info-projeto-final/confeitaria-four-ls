@@ -30,6 +30,7 @@ FOREIGN KEY(id_admin) REFERENCES usuario(id)
 DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
 id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nomepro VARCHAR (50)
 descricao VARCHAR(300),
 preco FLOAT,
 imagem VARCHAR(250)

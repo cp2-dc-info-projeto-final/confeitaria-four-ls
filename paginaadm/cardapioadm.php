@@ -27,7 +27,36 @@
           <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
         </div>
     </nav>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br>
     <div>
-        <form class="form" action="enviar.php" method="post" name="form" id="form1" accept-charset="utf-8" enctype="multipart/form-data" >
-    </form>
+          <form class="form" action="enviar.php" method="post" name="formu" id="form1" accept-charset="utf-8" enctype="multipart/form-data" >
+          <p>
+		<label for="nomepro">Nome do produto:</label><br>
+          <input id="nomepro" name="nomepro" required="required" type="text" maxlength="60">
+        </p>
+        <p>
+        <label for="imagem">Imagem do Produto:</label><br>
+          <input id="imagem" name="imagem" required="required" type=><br>
+        </p>
+        <p>
+        <label for="preco">Preço do produto:</label><br>
+          <input id="preco" name="preco" required="required" type="text" maxlength="70">
+        </p>
+        <p>
+        <label for="descricao">Descrição do produto:</label><br>
+          <input id="descricao" name="descricao" required="required" type="text" maxlength="90">
+        </p>
+        <p>
+            <input class="button" name="cadastrar" id="concluir" required="required" type="submit" value="Concluir edição"> 
+            <br>
+            <br>
+            <input class="button" name="limpar" id="limpar" required="required" type="reset" value="Limpar Campos preenchidos!">
+            <br>
+            <br>
+            <input class="button" name="sair" id="sair" type="button" href="paginainicial.html" value="Sair da conta">
+        </p>
+        </form>
     </div>
