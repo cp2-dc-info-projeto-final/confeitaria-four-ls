@@ -1,21 +1,18 @@
 <?php
-
-     Require "login.php";
-     $email = $_POST["email"];
-     $senha = $_POST["senha"];
-    
-    
-        session_start();   
+    require "login.php";
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
         
-        if (fazerlogin($email, $senha) == true) {
-            session_unset();
+    session_start();
+    if (fazerlogin($email, $senha) == true) {
+        session_unset();
         $_SESSION["nome"] = $row["nome"]; 
         header("Location: ../paginacliente/paginacliente.html");
         exit();
-    } else {
-        $erro = "Login ou senha incorreta";        
+    }
+    else {
+        $erro = "Login ou senha incorretos";        
         $_SESSION["erro"] = $erro;
-        header("Location: loginview.php");
+        header("Location: loginView.php");
         exit();
     }    
-?>

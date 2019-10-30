@@ -15,18 +15,20 @@
     if ($senha != $confirma_senha) {    
         $erro = "As senhas não são as mesmas";        
         $_SESSION["erro"] = $erro;
-        header("Location:cadastroview.html");
+        header("Location:cadastroview.php");
         exit();
-    } else{
+    } 
+
+    else{
 
         if (fazercadastro($nome, $email, $senha, $confirma_senha, $sexo, $telefone, $cidade, $endereco, $bairro)) {
             session_unset();
-            header("Location: loginview.php");
+            header("Location: ../login/loginview.php");
             exit();
         } else {
             $erro = "E-mail indisponível";        
             $_SESSION["erro"] = $erro;
-            header("Location: cadastroview.html");
+            header("Location: cadastroview.php");
             exit();
         }
 

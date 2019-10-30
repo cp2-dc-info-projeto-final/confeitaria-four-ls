@@ -3,8 +3,8 @@ DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR (50),
-senha VARCHAR(20),
-email VARCHAR (50)
+senha VARCHAR(255),
+email VARCHAR (50) NOT NULL
 );
 DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
@@ -30,11 +30,9 @@ FOREIGN KEY(id_admin) REFERENCES usuario(id)
 DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
 id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-cod_produto INT,
-sabor VARCHAR (50),
-tamanho INT,
-qtd INT,
-preco FLOAT
+descricao VARCHAR(300),
+preco FLOAT,
+imagem VARCHAR(250)
 );
 
 DROP TABLE IF EXISTS cliente_produto;
@@ -87,3 +85,4 @@ qtd INT,
 FOREIGN KEY(id_produto) REFERENCES produto(id_produto),
 FOREIGN KEY(id_venda) REFERENCES venda(id_venda)
 );
+

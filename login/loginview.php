@@ -4,7 +4,7 @@
             <title>Login - Confeitaria Four'ls</title>
             <meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link rel="stylesheet" type="text/css" href="csslogincadastro.css" />
+			<link rel="stylesheet" type="text/css" href="csslogin.css" />
           </head>
 
     <body>
@@ -16,7 +16,7 @@
                         <h1>Login</h1> 
                         <p> 
                             <label for="e-mail">E-mail</label>
-                            <input id="e-mail" name="e-mail" required="required" type="text" placeholder=" exemplo@gmail.com"/> 
+                            <input id="email" name="email" required="required" type="text" placeholder=" exemplo@gmail.com"/> 
                         </p>
                         
                         <p> 
@@ -40,7 +40,7 @@
 						<p>
                                 Ainda não tem conta?
                         </p>      
-								<a id="id_cliente" href="cadastroview.html">Cadastre-se agora mesmo</a>
+								<a id="id_cliente" href="../cadastro/cadastroview.php">Cadastre-se agora mesmo</a>
                         </div>
                         
                     </form>

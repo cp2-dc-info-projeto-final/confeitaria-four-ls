@@ -1,7 +1,7 @@
 <?php
     
     Function fazercadastro($nome, $email, $senha, $confirmasenha, $sexo, $telefone, $cidade, $endereco, $bairro) {
-        $hash = password_hash($senha, PASSWORD_DEFAULT);
+       
         $connection = mysqli_connect("localhost", "root", "", "confeitariafourls");
      
         if($connection === false){
@@ -18,8 +18,9 @@
         }else{
             die("Erro $sql. " . mysqli_error($connection));
         }
+        $hash = password_hash($senha, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO usuario (nome,senha) VALUES ('$nome', '$senha')";
+        $sql = "INSERT INTO usuario (nome,senha,email) VALUES ('$nome', '$hash','$email')";
 
         if(!mysqli_query($connection, $sql)) {
             die("Erro $sql. " . mysqli_error($connection));
