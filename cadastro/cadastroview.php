@@ -3,7 +3,7 @@
   <title>Cadastro - Confeitaria Four'ls</title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="csslogincadastro.css" />
+  <link rel="stylesheet" type="text/css" href="csscadastro.css" />
 </head>
 
 <body>
@@ -62,6 +62,15 @@
         </p>
         <p>
             <input name="cadastrar" required="required" type="submit" value="Concluir meu Cadastro"> 
+           
+            <?php
+        session_start();
+        if(array_key_exists('erro', $_SESSION) == true){
+            $erro = $_SESSION["erro"];
+            echo "<br><b>$erro</b>";
+        }
+    ?>
+
             <br>
             <input name="limpar" required="required" type="reset" value="Limpar Campos preenchidos!">
         </p>

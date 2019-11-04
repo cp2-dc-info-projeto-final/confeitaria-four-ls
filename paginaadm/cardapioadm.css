@@ -6201,7 +6201,7 @@
   }
   
   .bg-primary {
-    background-image: url(fundo2.png) !important;
+    background-image: url(fundo.png) !important;
   }
   
   a.bg-primary:hover, a.bg-primary:focus,
@@ -9844,3 +9844,7 @@
     background-color: #1a252f;
   }
   
+  .formu {
+    content: '\f106';;
+
+  }
