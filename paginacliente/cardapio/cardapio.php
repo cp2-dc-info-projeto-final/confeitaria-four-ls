@@ -59,51 +59,15 @@
 
     </div>
   </header>
-  <!-- Cardápio Section Heading -->
-  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cardápio</h2>
+  
+      <?php
+     $conexao = new PDO('mysql:host=localhost;dbname=meusprodutos',"root","");
 
-  <form name="cardapioform" id="cardapioform">
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Nome do produto:</label>
-                <input class="form-control" id="nome" type="text" placeholder="Seu nome" required="required"
-                  data-validation-required-message="Por favor,digite seu nome.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Descrição:</label>
-                <input class="form-control" id="email" type="email" placeholder="Seu e-mail" required="required"
-                  data-validation-required-message="Por favor,digite seu e-mail.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Imagem</label>
-                <input class="form-control" id="phone" type="tel" placeholder="Seu número" required="required"
-                  data-validation-required-message="Por favor,digite seu número.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div id="success"></div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-</form>
+     $select = $conexao->prepare("SELECT * FROM produtos");
+     $select->execute();
+     $fetch = $select->fetchAll();
 
-<?php
-    $conexao = new PDO('mysql:host=localhost;dbname=meusprodutos',"root","");
-
-    $select = $conexao->prepare("SELECT * FROM produtos");
-    $select->execute();
-    $fetch = $select->fetchAll();
-
-    foreach($fetch as $produto){
+     foreach($fetch as $produto){
         echo 'Nome do produto: '.$produto['nome'].' &nbsp;
         Quantidade: '.$produto['qtd'].' &nbsp;
         Preço: R$ '.number_format($produto['preco'],2,",",".").'
@@ -111,7 +75,7 @@
         <br/>
         <hr/>
         ';
-    }
+  }  
 ?>
 
 <!-- 
