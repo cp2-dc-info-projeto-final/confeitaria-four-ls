@@ -72,7 +72,7 @@
     ?>
 
             <br>
-            <input name="limpar" required="required" type="reset" value="Limpar Campos preenchidos!">
+            <input name="limpar" required="required" type="reset" value="Limpar Campos preenchidos">
         </p>
     </form>
     </div>

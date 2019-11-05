@@ -11,3 +11,4 @@ function cadastro($preco, $descricao, $imagem){
                 WHERE livro.id=$id";
                 mysqli_query($conn, $sql);
 }
+?>

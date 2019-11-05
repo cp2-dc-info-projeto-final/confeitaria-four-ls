@@ -32,7 +32,7 @@
             <br><br>
             <br>
     <div>
-          <form class="form" action="enviar.php" method="post" name="formu" id="form1" accept-charset="utf-8" enctype="multipart/form-data" >
+          <form class="center-form" action="enviar.php" method="post" name="formu" id="form1" accept-charset="utf-8" enctype="multipart/form-data" >
           <p>
 		<label for="nomepro">Nome do produto:</label><br>
           <input id="nomepro" name="nomepro" required="required" type="text" maxlength="60">
@@ -53,7 +53,7 @@
             <input class="button" name="adicionar" id="add" required="required" type="submit" value="Adicionar"> 
             <br>
             <br>
-            <input class="button" name="limpar" id="limpar" required="required" type="reset" value="Limpar Campos preenchidos!">
+            <input class="button" name="limpar" id="limpar" required="required" type="reset" value="Limpar Campos preenchidos">
             <br>
             <br>
             <input class="button" name="sair" id="sair" type="button" href="paginainicial.html" value="Sair da conta">
