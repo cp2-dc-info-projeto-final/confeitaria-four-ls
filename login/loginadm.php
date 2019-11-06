@@ -1,4 +1,3 @@
-
 <html>
     <head>
             <title>Login - Confeitaria Four'ls</title>
@@ -15,16 +14,9 @@
                     <form method="post" action="loginCTRL.php"> 
                         <h1>Login</h1> 
                         <p> 
-                            <label for="e-mail">E-mail</label>
-                            <input id="email" name="email" required="required" type="text" placeholder=" exemplo@gmail.com"/> 
-                        </p>
-                        
-                        <p> 
-                            <label for="senha">Senha</label>
-                            <input id="senha" name="senha" required="required" type="password" placeholder=" ex= 54321"/>
-                        </p>
-                        
-                    
+                            <label for="cod">Digite o código para entrar:</label>
+                            <input id="cod" name="cod" required="required" type="text"> 
+               </p>
                         <p> 
                             <input type="submit" value="Entrar" /> 
                             <?php
@@ -35,14 +27,7 @@
                             }
                             ?>
                         </p>
-                            
-                        <div class="link">
-						<p>
-                                Não tem conta?
-                        </p>      
-								<a id="id_cliente" href="../cadastro/cadastroview.php">Cadastre-se agora mesmo</a>
-                                <a id="id_admin" href="loginadm.php">Administrador</a>
-                        </div>
+                    
                         
                     </form>
             </div>
