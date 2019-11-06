@@ -12,10 +12,6 @@
     + [RF 07](#RF-07)
     + [RF 08](#RF-08)
     + [RF 09](#RF-09)
-    + [RF 10](#RF-10)
-    + [RF 11](#RF-11)
-    + [RF 12](#RF-12)
-    + [RF 13](#RF-13)
 - [Requisitos Não Funcionais](#requisitos-não-funcionais)
     + [RNF 01](#rnf-01)
     + [RNF 02](#rnf-02)
@@ -29,8 +25,6 @@
     + [RNF 09](#rnf-09)
     + [RNF 10](#rnf-10)
     + [RNF 11](#rnf-11)
-    + [RNF 12](#rnf-12)
-
 ## Requisitos Funcionais
 
 ### RF 01
@@ -51,71 +45,39 @@ Para isto, o cliente já deve estar cadastrado.
 
 ### RF 04
 
-Realizar consultas de disponibilidade dos produtos anunciados (consultar estoque).
-
-### RF 05
-
 Realizar a emissão do valor final.
 
 Para isto, o cliente deve estar cadastrado e estar com produtos em seu carrinho.
 
-### RF 06 
-
-Emitir nota fiscal.
-
-Para isto, o cliente deve ter feito uma compra pelo site.
-
-### RF 07
+### RF 05
 
 Mostrar, a partir de imagens, os produtos que estão sendo anunciados.
 
-### RF 08
+### RF 06
 
 Cancelar encomendas. 
 
 O cliente deve ter feito e confirmado uma encomenda anteriormente.
 
-### RF 09
-
-Alterar incomendas. 
-
-O cliente deve ter feito e confirmado uma encomenda anteriormente.
-
-### RF 10
-
-Emitir prazo de entrega. 
-
-O cliente deve ter feito e confirmado uma encomenda anteriormente. 
-
-### RF 11
-
-Emitir prazo de alteração da encomenda. 
-
-O cliente deve ter feito e confirmado uma encomenda anteriormente. 
-
-### RF 12
+### RF 07
 
 Alteração do valor final da compra. 
 
 Para isto, o cliente deve estar cadastrado no site e por ou retirar algo do seu carrinho.
 
-#### RF 13
 
-Confirmação do pedido através do email. 
-
-Para isto, o cliente deve ter feito uma encomenda a partir do site. 
-
-### RF 14
+### RF 08
 
 Área de acesso do operador. 
 
 Área com senha e login onde só o operador do site poderá acessar.
 
-### RF 15
+### RF 09 
 
-Desabilitar conta.
+área contendo nossos contatos como e-mail e telefone.
 
-Para isto, o cliente já deve ter criado uma conta anteriormente. 
+
+
 
 
 ## Requisitos Não Funcionais
@@ -146,7 +108,7 @@ O sistema deverá passar confiança para o usuário.
 
 ### RF 07
 
-A interface do usuário deverá ser implementada com JavaScript, PHP e HTML. 
+A interface do usuário deverá ser implementada com CSS, PHP e HTML. 
 
 ### RNF 08
 
@@ -154,16 +116,12 @@ Informações pessoais dos operadores não poderão ser vistas pelos clientes
 
 ### RNF 09
 
-O sistema deverá suportar uma carga máxima de 1500 usuários simultâneos com uma piora de desempenho de, no máximo, 10% em qualquer operação. 
+O sistema deverá esta disponível pelo menos 99,6% do tempo em dias de semana entre 05:00 e meia-noite e pelo menos 99,8% nos finais de semana entre mesmo horário. Considerando que entre 16:00 e 19:00 o sistema deve estar disponível pelo menos 99,9% do tempo.
 
 ### RNF 10
 
-O sistema deverá esta disponível pelo menos 99,6% do tempo em dias de semana entre 05:00 e meia-noite e pelo menos 99,8% nos finais de semana entre mesmo horário. Considerando que entre 16:00 e 19:00 o sistema deve estar disponível pelo menos 99,9% do tempo.
-
-### RNF 11
-
 Um programador com pouca experiência na área de suporte ao produto deve ser capaz de dar suporte a um outro dispositivo do sistema em, no máximo, 1h e 30 min. 
 
-### RNF 12
+### RNF 11
 
 Apenas os operadores do site poderão visualizar informações pessoais e históricos de transações dos clientes.

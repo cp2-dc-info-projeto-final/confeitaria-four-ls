@@ -1,14 +1,14 @@
-# Confeitaria Four L's
+# Confeitaria Four'Ls
 
 ## Visão Geral
 
-Nosso site visa atender as necessidades da nossa cliente **Rosane Barroso**, proprietária da confeitaria, que consistem na melhor administração de encomendas e na exposição de seus produtos. 
+Nosso site visa atender as necessidades da nossa cliente *Rosane Barroso*, proprietária da confeitaria, que consistem na melhor administração de encomendas e na exposição de seus produtos. 
 
 ## Objetivos 
 
 Além de mostrar todos os seus doces. Queremos atender as demandas dos clientes,
-funcionando assim como um espaço onde eles poderão fazer *encomendas*, assim como
-também poderão escolher o tamanho, a quantidade e o sabor do produto de sua preferência,
+funcionando assim como um espaço onde eles poderão fazer encomendas, assim como
+também poderão escolher do produto de sua preferência,
 podendo colocar especificações necessárias para um doce perfeito de acordo com sua vontade.
 
 ##  Principais funcionalidades
@@ -20,7 +20,7 @@ podendo colocar especificações necessárias para um doce perfeito de acordo co
 
 ## Stakeholder
 
-### **Nome:** Rosane Barroso da Silva
-### **Profissão:** Confeiteira 
-### **Cargo/empresa:** Proprietária da Confeitaria Four L's
-### **Data da entrevista:** 27/04/2019
+### *Nome:* Rosane Barroso da Silva
+### *Profissão:* Confeiteira 
+### *Cargo/empresa:* Proprietária da Confeitaria Four'Ls
+### *Data da entrevista:* 27/04/2019
