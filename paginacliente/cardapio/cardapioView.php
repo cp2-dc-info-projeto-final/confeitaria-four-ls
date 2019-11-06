@@ -59,24 +59,55 @@
 
     </div>
   </header>
+
+  <div style="display: block; margin: 100px;">
+
+  <table>
+        <tr>
+          <th>
+            Nome
+          </th>
+          <th>
+            Descricao
+          </th>
+          <th>
+            Preco
+          </th>
+          <th>
+          </th>
+        </tr>
+  <?php
+
+    require_once "cardapioCtrl.php";
+
+    $produtos = buscarProdutosCtrl();
+
+    foreach($produtos as $produto){
+  ?>
+
+
+      <tr>
+        <td>
+          <?php echo $produto['nomepro']; ?>
+        </td>
+        <td>
+          <?php echo $produto['descricao']; ?>
+        </td>
+        <td>
+          <?php echo "R$ " . number_format($produto['preco'],2,",",".") ?>
+        </td>
+        <td>
+          <a href="<?php //echo "carrinho.php?id='". $produto['id_produto'] . "'"?>">Adicionar ao carrinho</a> 
+        </td>
+      </tr>
+  <?php    
+      }  
+  ?>
+
+  </table>
+  </div>
   
-      <?php
-     $conexao = new PDO('mysql:host=localhost;dbname=meusprodutos',"root","");
-
-     $select = $conexao->prepare("SELECT * FROM produtos");
-     $select->execute();
-     $fetch = $select->fetchAll();
-
-     foreach($fetch as $produto){
-        echo 'Nome do produto: '.$produto['nome'].' &nbsp;
-        Quantidade: '.$produto['qtd'].' &nbsp;
-        Preço: R$ '.number_format($produto['preco'],2,",",".").'
-        <a href="carrinho.php?add=carrinho&id='.$produto['id'].'">Adicionar ao carrinho</a>
-        <br/>
-        <hr/>
-        ';
-  }  
-?>
+      
 
 <!-- 
   <php
