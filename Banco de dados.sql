@@ -23,7 +23,6 @@ DROP TABLE IF EXISTS administrador;
 CREATE TABLE administrador(
 id_admin INT NOT NULL PRIMARY KEY,
 nome VARCHAR(50),
-cod INT,
 FOREIGN KEY(id_admin) REFERENCES usuario(id)
 );
 
