@@ -22,5 +22,5 @@ podendo colocar especificações necessárias para um doce perfeito de acordo co
 
 ### *Nome:* Rosane Barroso da Silva
 ### *Profissão:* Confeiteira 
-### *Cargo/empresa:* Proprietária da Confeitaria Four L's
+### *Cargo/empresa:* Proprietária da Confeitaria Four'Ls
 ### *Data da entrevista:* 27/04/2019
