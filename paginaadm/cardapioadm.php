@@ -25,7 +25,8 @@
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
           <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
-          <a  id="id_admin" href="../cadastro/cadastroadm.php">Cadastrar novo administrador</a>
+          <input class="button" name="newadm" id="id_admin" type="button" href="../cadastro/cadastroadm.php" value="Cadastrar novo administrador">
+          <input class="button" name="sair" id="sair" type="button" href="../paginainicial.html" value="Sair da conta">
         </div>
     </nav>
             <br><br>
@@ -33,14 +34,13 @@
             <br><br>
             <br>
     <div>
-          <form class="center-form" action="enviar.php" method="post" name="formu" id="form1" accept-charset="utf-8" enctype="multipart/form-data" >
+      <center>
+      <br>
+            <br>
+          <form class="center-form" action="cardapioCTRL.php" method="post" name="formu" id="form1" accept-charset="utf-8" enctype="multipart/form-data" >
           <p>
 		<label for="nomepro">Nome do produto:</label><br>
           <input id="nomepro" name="nomepro" required="required" type="text" maxlength="60">
-        </p>
-        <p>
-        <label for="imagem">Imagem do Produto:</label><br>
-          <input id="imagem" name="imagem" required="required" type=><br>
         </p>
         <p>
         <label for="preco">Preço do produto:</label><br>
@@ -51,15 +51,22 @@
           <input id="descricao" name="descricao" required="required" type="text" maxlength="90">
         </p>
         <p>
-            <input class="button" name="adicionar" id="add" required="required" type="submit" value="Adicionar"> 
+        <label for="conteudo">Adicionar imagem:</label>
+        <br>
+            
+        <input type="file" name="pic" accept="image/*">   
+        <br>
+        <br>
+            <br>
+          <button type="submit">Enviar</button>
             <br>
             <br>
             <input class="button" name="limpar" id="limpar" required="required" type="reset" value="Limpar Campos preenchidos">
             <br>
             <br>
-            <input class="button" name="sair" id="sair" type="button" href="paginainicial.html" value="Sair da conta">
         </p>
         </form>
+</center>
     </div>
 
 </html>
