@@ -6,7 +6,7 @@
  
         // Check connection
         if($connection === false){
-            die("Erro de Conecção" . mysqli_connect_error());
+            die("Erro de Conexão" . mysqli_connect_error());
         }
         
         $sql = "SELECT senha,nome FROM usuario WHERE email='$email'";
