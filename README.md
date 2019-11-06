@@ -23,8 +23,8 @@
  # Requisitos
 
  + [Requisitos](Requisitos.md)
- + [Áudio da entrevista](entrevista.md)
- + [entrevista](Entrevista.mp4)
+ + [Entrevista](entrevista.md)
+ + [Áudio da entrevista](Entrevista.mp4)
 
  # Casos de uso 
 
