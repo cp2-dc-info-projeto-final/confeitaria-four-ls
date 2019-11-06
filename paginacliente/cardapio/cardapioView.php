@@ -97,7 +97,7 @@
           <?php echo "R$ " . number_format($produto['preco'],2,",",".") ?>
         </td>
         <td>
-          <a href="<?php //echo "carrinho.php?id='". $produto['id_produto'] . "'"?>">Adicionar ao carrinho</a> 
+          <a href="paginacliente/carrinho/carrinho.php?acao=add&id=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
         </td>
       </tr>
   <?php    

@@ -9,14 +9,6 @@
 
         if ($select) {
             $fetch = $select->fetchAll();
-
-            foreach($fetch as $produto){
-                echo $produto['id_produto'] . "<br>";
-                echo $produto['nomepro'] . "<br>";
-                echo $produto['descricao'] . "<br>";
-                echo $produto['preco'] . "<br>";
-            }
-
             return $fetch;
         } else {
             die($select->errorInfo());
