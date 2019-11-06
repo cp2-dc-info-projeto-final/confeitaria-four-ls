@@ -25,6 +25,7 @@
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
           <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
+          <a  id="id_admin" href="../cadastro/cadastroadm.php">Cadastrar novo administrador</a>
         </div>
     </nav>
             <br><br>

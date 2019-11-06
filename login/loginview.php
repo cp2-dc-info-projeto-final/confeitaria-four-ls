@@ -41,7 +41,6 @@
                                 Não tem conta?
                         </p>      
 								<a id="id_cliente" href="../cadastro/cadastroview.php">Cadastre-se agora mesmo</a>
-                                <a id="id_admin" href="loginadm.php">Administrador</a>
                         </div>
                         
                     </form>
