@@ -1,6 +1,6 @@
 <?php
 session_start();          
-          if(!isset($_SESSION['carrinho'])){
+      if(!isset($_SESSION['carrinho'])){
          $_SESSION['carrinho'] = array();
       }
         
@@ -11,38 +11,37 @@ session_start();
  
           //ADICIONAR CARRINHO
           if($_GET['acao'] == 'add'){
-          $id = intval($_GET['id_produto']);
-          if(!isset($_SESSION['carrinho'][$id])){
-          $_SESSION['carrinho'][$id] = 1;
-          header("location: carrinho.php");
-          }else{
-          $_SESSION['carrinho'][$id] += 1;
-          header("location: carrinho.php");
+            $id = intval($_GET['id_produto']);
+            if(!isset($_SESSION['carrinho'][$id])){
+              $_SESSION['carrinho'][$id] = 1;
+              header("location: carrinho.php");
+            }else{
+              $_SESSION['carrinho'][$id] += 1;
+              header("location: carrinho.php");
+            }
           }
+
+          // DECREMENTAR DO CARRINHO
+          if($_GET['acao'] == 'down'){
+            $id = intval($_GET['id_produto']);
+            if(isset($_SESSION['carrinho'][$id])){
+              $_SESSION['carrinho'][$id] = $_SESSION['carrinho'][$id] - 1;
+              if ($_SESSION['carrinho'][$id] == 0)
+              {
+                unset($_SESSION['carrinho'][$id]);
+              }
+            header("location: carrinho.php");
+            }
           }
            
          //REMOVER CARRINHO
          if($_GET['acao'] == 'del'){
             $id = intval($_GET['id_produto']);
             if(isset($_SESSION['carrinho'][$id])){
-               unset($_SESSION['carrinho'][$id]);
+              unset($_SESSION['carrinho'][$id]);
             }
          }
            
-         //ALTERAR QUANTIDADE
-         if($_GET['acao'] == 'up'){
-            if(is_array($_POST['produto'])){
-               foreach($_POST['produto'] as $id => $qtd){
-                  $id  = intval($id);
-                  $qtd = intval($qtd);
-                  if(!empty($qtd) || $qtd <> 0){
-                     $_SESSION['carrinho'][$id] = $qtd;
-                  }else{
-                     unset($_SESSION['carrinho'][$id]);
-                  }
-               }
-            }
-         }
         
       }         
            
@@ -69,6 +68,11 @@ session_start();
             document.getElementById("foto").src = "<?php echo $prod_img4; ?>";
             }
         </script>
+        <style>
+        .tabela-carrinho {
+          margin: 150px;
+        }
+        </style>
     </head>
     <body id="page-top">
 
@@ -86,7 +90,7 @@ session_start();
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.html">Meu carrinho</a>
+                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
               </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
@@ -111,7 +115,7 @@ session_start();
     </div>
   </header>
             <div class="interface">
-                <table class="tabela-carrinho">
+        <table class="tabela-carrinho">
                 <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
                     <thead>
           <tr>
@@ -121,54 +125,64 @@ session_start();
             <th width="100">SubTotal</th>
             <th width="64">Remover</th>
           </tr>
-    </thead>
-            <form action="?acao=up" method="post">
-    <tfoot>
+    </thead>       
+    <tbody>
+        <form action="?acao=up" method="post">
+        <?php
+            require_once "connection.php";
+              if(count($_SESSION['carrinho']) == 0){
+                echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
+              }else{
+                $total = 0;
+                $conexao = getConnection();
+                foreach($_SESSION['carrinho'] as $id => $qtd){
+                      try {
+                        $sql   = "SELECT id_produto, nomepro, descricao, preco, imagem FROM produto WHERE id_produto = :id_produto";
+                        $query = $conexao->prepare($sql);
+                        $query->bindParam(":id_produto", $id);
+                        $query->execute();
+                        $row = $query->fetch();
+                    
+                        
+                        $nome = $row["nomepro"];
+                        $preco = $row["preco"];
+                        $sub = $row["preco"] * $qtd;
+                          
+                        $total += $sub;
+
+                      } catch( PDOExecption $e ) { 
+                          die("Erro ao buscar carrinho! " . $e->getMessage());
+                      } 
+
+                      
+                      
+                    echo '<tr>       
+                          <td>'.$nome . " " . $id . '</td>
+                          <td>
+                          <a href="?acao=down&id_produto='.$id.'">-</a>
+                          <input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" />
+                          <a href="?acao=add&id_produto='.$id.'">+</a></td>
+                          <td>R$ '.$preco.'</td>
+                          <td>R$ '.$sub.'</td>
+                          <td><a href="?acao=del&id_produto='.$id.'">Remove</a></td>
+
+                      </tr>';
+                }
+                    $total = $total;
+                    echo '<tr>
+                            <td colspan="4">Total</td>
+                            <td>R$ '.$total.'</td>
+                      </tr>';
+              }
+        ?>
+
+     </tbody>
+     <tfoot>
            <tr>
             <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
             <tr>
             <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
     </tfoot>
-       
-    <tbody>
-               <?php
-                    require_once "connection.php";
-                     if(count($_SESSION['carrinho']) == 0){
-                        echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
-                     }else{
-                        $total = 0;
-                        $conexao = getConnection();
-                        foreach($_SESSION['carrinho'] as $id => $qtd){
-                              
-                              $sql   = "SELECT *  FROM produtos WHERE id_produto=:id_produto";
-                              $qr = $conexao->prepare($sql);
-                              $qr->bindParam(":id_produto",$id);
-                              $qr->execute();
-                              $ln = $qr->fetchAll();
-                                
-                              $nome  = $ln["nomepro"];
-                              $preco = $ln["preco"];
-                              $sub   = $ln["preco"] * $qtd;
-                                
-                              $total += $ln["preco"] * $qtd;
-                             
-                           echo '<tr>       
-                                 <td>'.$nome.'</td>
-                                 <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
-                                 <td>R$ '.$preco.'</td>
-                                 <td>R$ '.$sub.'</td>
-                                 <td><a href="?acao=del&id='.$id.'">Remove</a></td>
-                              </tr>';
-                        }
-                           $total = $total;
-                           echo '<tr>
-                                    <td colspan="4">Total</td>
-                                    <td>R$ '.$total.'</td>
-                              </tr>';
-                     }
-               ?>
-     
-     </tbody>
         </form>
             </table>
         </div>
