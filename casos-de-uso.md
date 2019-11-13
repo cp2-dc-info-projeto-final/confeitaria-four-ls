@@ -1,12 +1,12 @@
 # Especificação de Casos de Uso
 
 # Sumário
-- [CDU 01 – Fazer cadastro](#cdu-01---fazer-cadastro)
-- [CDU 02 – Escolher produto](#cdu-02---escolher-produto)
-- [CDU 03 – Finalizar pedido](#cdu-03---finalizar-pedido)
-- [CDU 04 – Alterar pedido](#cdu-04---alterar-pedido)
-- [CDU 05 – Cancelar pedido](#cdu-05---cancelar-pedido)
-- [CDU 06 – Fazer um comentário](#cdu-06---fazer-um-comentário)
+- [CDU 01 – Fazer cadastro](#cdu-01---Fazer-cadastro)
+- [CDU 02 – Escolher produto](#cdu-02---Escolher-produto)
+- [CDU 03 – Finalizar pedido](#cdu-03---Finalizar-pedido)
+- [CDU 04 – Alterar pedido](#cdu-04---Cancelar-pedido)
+- [CDU 05 – Cancelar pedido](#cdu-05---Fazer-login)
+- [CDU 06 – Fazer um comentário](#cdu-06---)
 
 # Descrição
 
@@ -71,25 +71,7 @@
 3. O cliente confirma o pedido.
 
 
-## CDU 04 – Alterar pedido
-
-**Atores:** Cliente
-
-**Pré-condições:** O cliente deve estar cadastrado e já ter confirmado o pedido
-
-**Fluxo principal:** 
-
-1. O cliente entra na área do cliente.
-
-2. O cliente seleciona o produto pedido.
-
-3. O cliente altera o pedido dentro do prazo dado.
-
-4. O cliente confirma a alteração.
-
-5. O sistema registra as alterações no histórico do cliente.
-
-## CDU 05 – Cancelar pedido
+## CDU 04 – Cancelar pedido
 
 **Atores:** Cliente 
 
@@ -99,26 +81,22 @@
 
 1. O cliente seleciona o pedido.
 
-2. O cliente cancela o pedido dentro do prazo permitido.
+2. O cliente verifica os itens selecionados por ele.
 
 3. O cliente confirma o cancelamento.
 
-4. O sistema registra o cancelamento no histórico do cliente.
 
+## CDU 05 – Fazer login
 
+**Atores:** Cliente e moderador
 
-## CDU 06 – Fazer um comentário
+**Pré-condições:** Ter uma conta em noss Site.
+**Fluxo principal:** 
 
-**Atores:** Cliente 
+1. O cliente ou moderador,que ja possua cadastro,insere seu login e senha.
 
-**Pré-condições:** O cliente deve se identificar com o email.
+2. Caso os dados informados estejam corretos,o usuário é redirecionado para sua página.
 
-**Fluxo principal:**
+**Fluxo alternativo:** 
 
-1. O cliente digita o comentário
-
-2. O cliente envia o comentário.
-
-3. O sistema exibe o comentário.
-
-
+1. Os dados informados pelo usuario não são os mesmos contidos no banco de dados. Assim,o sistema não ira permitir a entrada do usuário em sua página.
