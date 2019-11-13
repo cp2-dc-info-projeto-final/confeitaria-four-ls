@@ -6,7 +6,7 @@
 - [CDU 03 – Finalizar pedido](#cdu-03---Finalizar-pedido)
 - [CDU 04 – Alterar pedido](#cdu-04---Cancelar-pedido)
 - [CDU 05 – Cancelar pedido](#cdu-05---Fazer-login)
-- [CDU 06 – Fazer um comentário](#cdu-06---)
+- [CDU 06 – Fazer um comentário](#cdu-06---Ter-acesso-aos-nossos-doces)
 
 # Descrição
 
@@ -90,7 +90,7 @@
 
 **Atores:** Cliente e moderador
 
-**Pré-condições:** Ter uma conta em noss Site.
+**Pré-condições:** Ter uma conta em nosso Site.
 **Fluxo principal:** 
 
 1. O cliente ou moderador,que ja possua cadastro,insere seu login e senha.
@@ -100,3 +100,12 @@
 **Fluxo alternativo:** 
 
 1. Os dados informados pelo usuario não são os mesmos contidos no banco de dados. Assim,o sistema não ira permitir a entrada do usuário em sua página.
+
+## CDU 06 - Ter acesso aos nossos doces
+
+**Atores:**  Cliente
+
+**Pré-condições:** O cliente deve estar em nosso site.
+**Fluxo principal:**
+
+1. O usuario,idependente de estar,ou não,logado,deverá ir para a página "cardapio". 
