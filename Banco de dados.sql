@@ -36,14 +36,6 @@ preco FLOAT,
 imagem VARCHAR(250)
 );
 
-INSERT INTO produto (nomepro, descricao, preco) VALUES
-('Bolo de Cenoura', 'Aquele gostoso com calda de chocolate', 10.0),
-('Bolo de abacaxi', 'Aquele gostoso com calda de abacaxi', 10.0),
-('Bolo de baunilha', 'Aquele gostoso sem calda', 10.0),
-('Bolo de chocolate', 'Aquele gostoso com calda de chocolate', 10.0),
-('Bolo de fubá', 'Aquele gostoso com calda de coco', 10.0),
-('Bolo de banana', 'Aquele gostoso com calda de banana', 10.0);
-
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
