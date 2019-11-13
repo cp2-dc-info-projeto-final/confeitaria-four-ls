@@ -72,6 +72,11 @@ session_start();
         .tabela-carrinho {
           margin: 150px;
         }
+
+        h2{
+          margin: 90px;
+          text-align: center;
+        }
         </style>
     </head>
     <body id="page-top">
@@ -114,9 +119,10 @@ session_start();
 
     </div>
   </header>
-            <div class="interface">
+    <div class="interface">
+      <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
         <table class="tabela-carrinho">
-                <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
+                
                     <thead>
           <tr>
             <th width="244">Produto</th>
@@ -157,14 +163,14 @@ session_start();
                       
                       
                     echo '<tr>       
-                          <td>'.$nome . " " . $id . '</td>
+                          <td>'.$nome . '</td>
                           <td>
                           <a href="?acao=down&id_produto='.$id.'">-</a>
                           <input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" />
                           <a href="?acao=add&id_produto='.$id.'">+</a></td>
                           <td>R$ '.$preco.'</td>
                           <td>R$ '.$sub.'</td>
-                          <td><a href="?acao=del&id_produto='.$id.'">Remove</a></td>
+                          <td><a href="?acao=del&id_produto='.$id.'">Remover</a></td>
 
                       </tr>';
                 }
