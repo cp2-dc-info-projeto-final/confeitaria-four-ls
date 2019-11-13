@@ -1,6 +1,6 @@
 <?php
 
-    require_once "connection.php";
+    require_once "../carrinho/connection.php";
     function buscarProdutos() {
         $conexao = getConnection();
 

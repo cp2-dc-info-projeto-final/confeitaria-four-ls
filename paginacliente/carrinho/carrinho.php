@@ -127,7 +127,7 @@ session_start();
            <tr>
             <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
             <tr>
-            <td colspan="5"><a href="index.php">Continuar Comprando</a></td>
+            <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
     </tfoot>
        
     <tbody>
@@ -141,16 +141,16 @@ session_start();
                         foreach($_SESSION['carrinho'] as $id => $qtd){
                               
                               $sql   = "SELECT *  FROM produtos WHERE id_produto=:id_produto";
-                              $qr    = $conexao->prepare($sql) or die($conexao->errorInfo());
-                              $qr->bindValue(":id_produto", $id);
+                              $qr = $conexao->prepare($sql);
+                              $qr->bindParam(":id_produto",$id);
                               $qr->execute();
-                              $ln    = $qr->fetch();
+                              $ln = $qr->fetchAll();
                                 
-                              $nome  = $ln['nomepro'];
-                              $preco = $ln['preco'];
-                              $sub   = $ln['preco'] * $qtd;
+                              $nome  = $ln["nomepro"];
+                              $preco = $ln["preco"];
+                              $sub   = $ln["preco"] * $qtd;
                                 
-                              $total += $ln['preco'] * $qtd;
+                              $total += $ln["preco"] * $qtd;
                              
                            echo '<tr>       
                                  <td>'.$nome.'</td>
@@ -172,6 +172,5 @@ session_start();
         </form>
             </table>
         </div>
-        <?php include_once 'footer.php'; ?>
     </body>
 </html>
