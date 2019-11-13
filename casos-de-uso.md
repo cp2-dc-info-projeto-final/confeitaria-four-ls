@@ -1,11 +1,11 @@
 # Especificação de Casos de Uso
 
 # Sumário
-- [CDU 01 – Fazer cadastro](#cdu-01---fazer-cadastro)
-- [CDU 02 – Escolher produto](#cdu-02---escolher-produto)
-- [CDU 03 – Finalizar pedido](#cdu-03---finalizar-pedido)
-- [CDU 04 – Alterar pedido](#cdu-04---cancelar-pedido)
-- [CDU 05 – Cancelar pedido](#cdu-05---fazer-login)
+- [CDU 01 – Fazer cadastro](#cdu-01---Fazer-cadastro)
+- [CDU 02 – Escolher produto](#cdu-02---Escolher-produto)
+- [CDU 03 – Finalizar pedido](#cdu-03---Finalizar-pedido)
+- [CDU 04 – Alterar pedido](#cdu-04---Cancelar-pedido)
+- [CDU 05 – Cancelar pedido](#cdu-05---Fazer-login)
 - [CDU 06 – Fazer um comentário](#cdu-06---)
 
 # Descrição
