@@ -1,7 +1,8 @@
 <?php
 
+    require_once "connection.php";
     function buscarProdutos() {
-        $conexao = new PDO('mysql:host=localhost;dbname=confeitariafourls',"root","");
+        $conexao = getConnection();
 
         $select = $conexao->prepare("SELECT id_produto, nomepro, descricao, preco, imagem FROM produto");
         $select->execute();

@@ -47,14 +47,6 @@ session_start();
       }         
            
     ?>
-<?php include_once "functions.php";
-$uri = $_SERVER['PHP_SELF'];
-$busca_title = mysqli_query($conexao, "SELECT * FROM produto WHERE url='$uri' limit 1");
- 
-while($title = mysqli_fetch_array($busca_title)){
-    $titulos = $title['title'];    
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -78,43 +70,46 @@ while($title = mysqli_fetch_array($busca_title)){
             }
         </script>
     </head>
-    <body>
-        <div class="container clearfix">
-            <header id="cabecalho">
-                <div class="central">
-                    <div class="logo">
-                        <a href="index.php"><img src="img/logotipo.jpg" alt="www.sualoja.com.br"/></a>
-                    </div>
-                    <form class="searchbar" method="get" action="busca.php">
-                        <input type="text" class="cx-busca" name="busca" placeholder="Digite o que você procura"/>
-                        <input type="image" src="img/magnifier.png" class="btn-busca" name="buscar" value="Buscar"/>
-                    </form>                
-                    <div class="login">
-                        <?php
-                            if(empty($_SESSION['usuario'])){
-                            echo "<p><a href='login.php'>Login</a> | <a href='login.php'>Cadastre-se</a></p>";
-                            }else{
-                            echo "Seja bem Vindo ".$_SESSION['usuario'];
-                            echo "<p><a href='#'>Meus Pedidos</a> | <a href='#'>Minha Conta</a></p>";
-                            echo "<a href='sair.php'>Sair</a>";
-                            }
-                        ?>
-                    </div>
-                    <nav id="menu">                        
-                        <div class="paginas-menu">
-                            <?php
-                            $sql_menu = "SELECT * FROM menu";
-                            $busca_menu = mysqli_query($conexao, $sql_menu);
-                                while($row_menu = mysqli_fetch_array($busca_menu)){
-                                    $nome = $row_menu['nome'];
-                                    $pagina = $row_menu['pagina'];
-                                    echo "<a href='$pagina'><div class='menu'>$nome</div></a>";
-                                }
-                            ?>
-                        </div>
-                    </nav>
-                </div>
-            </header>
+    <body id="page-top">
+
+  
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+          <img class="logo" src="logo.png" height="100" width="100"> 
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#sobrenos">Sobre nós</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.html">Meu carrinho</a>
+              </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">Confeitaria - Gostosuras - Doces</p>
+
+    </div>
+  </header>
             <div class="interface">
                 <table class="tabela-carrinho">
                 <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
@@ -137,21 +132,25 @@ while($title = mysqli_fetch_array($busca_title)){
        
     <tbody>
                <?php
+                    require_once "connection.php";
                      if(count($_SESSION['carrinho']) == 0){
                         echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
                      }else{
-                        require("functions.php");
-                                                               $total = 0;
+                        $total = 0;
+                        $conexao = getConnection();
                         foreach($_SESSION['carrinho'] as $id => $qtd){
-                              $sql   = "SELECT *  FROM produtos WHERE id= '$id'";
-                              $qr    = mysqli_query($conexao, $sql) or die(mysql_error());
-                              $ln    = mysqli_fetch_assoc($qr);
+                              
+                              $sql   = "SELECT *  FROM produtos WHERE id_produto=:id_produto";
+                              $qr    = $conexao->prepare($sql) or die($conexao->errorInfo());
+                              $qr->bindValue(":id_produto", $id);
+                              $qr->execute();
+                              $ln    = $qr->fetch();
                                 
-                              $nome  = $ln['nome'];
-                              $preco = $ln['valor'];
-                              $sub   = $ln['valor'] * $qtd;
+                              $nome  = $ln['nomepro'];
+                              $preco = $ln['preco'];
+                              $sub   = $ln['preco'] * $qtd;
                                 
-                              $total += $ln['valor'] * $qtd;
+                              $total += $ln['preco'] * $qtd;
                              
                            echo '<tr>       
                                  <td>'.$nome.'</td>
