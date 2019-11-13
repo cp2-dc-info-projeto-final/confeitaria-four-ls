@@ -36,6 +36,9 @@ preco FLOAT,
 imagem VARCHAR(250)
 );
 
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Bolo de cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/2/bolocenoura.jpg")
+
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
