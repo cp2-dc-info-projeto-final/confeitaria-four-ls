@@ -29,8 +29,8 @@
  # Casos de uso 
 
  +  [Casos de uso](casos-de-uso.md)
- + 
- + 
+ + Diagrama de casos de uso- imagem
+ + Diagrama de casos de uso-editavel
 
  # Modelagem
  + Diagrama de classes
@@ -38,4 +38,4 @@
  + Link para script `schema.sql`
 
 # Manual de utilização
- + [Manual de utilização](manual.md)
+ + [Manual de utilização](Manual.md)
