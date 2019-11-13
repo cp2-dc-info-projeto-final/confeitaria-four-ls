@@ -54,7 +54,7 @@
         <label for="conteudo">Adicionar imagem:</label>
         <br>
             
-        <input type="file" name="pic" accept="image/*">   
+        <input type="file" name="arquivo" accept="image/*">   
         <br>
         <br>
             <br>

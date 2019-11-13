@@ -50,8 +50,6 @@
 
 **Fluxo alternativo:**
 
-1. O cliente digita o código do produto.
-
 2. O cliente escolhe o tamanho do produto.
 
 3. O cliente escolhe a quantidade.
@@ -72,7 +70,6 @@
 
 3. O cliente confirma o pedido.
 
-4. O sistema registra o pedido no histórico do cliente
 
 ## CDU 04 – Alterar pedido
 
