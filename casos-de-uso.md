@@ -6,7 +6,7 @@
 - [CDU 03 – Finalizar pedido](#cdu-03---Finalizar-pedido)
 - [CDU 04 – Alterar pedido](#cdu-04---Cancelar-pedido)
 - [CDU 05 – Cancelar pedido](#cdu-05---Fazer-login)
-- [CDU 06 – Fazer um comentário](#cdu-06---Ter-acesso-aos-nossos-doces)
+- [CDU 06 – Ter acesso aos nossos doces](#cdu-06---Ter-acesso-aos-nossos-doces)
 
 # Descrição
 
