@@ -1,153 +1,178 @@
-<?php 
-	session_start();
-	require_once "functions/product.php";
-	require_once "functions/cart.php";
-
-	$pdoConnection = require_once "connection.php";
-
-	if(isset($_GET['acao']) && in_array($_GET['acao'], array('add', 'del', 'up'))) {
-		
-		if($_GET['acao'] == 'add' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
-			addCart($_GET['id'], 1);			
-		}
-
-		if($_GET['acao'] == 'del' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
-			deleteCart($_GET['id']);
-		}
-
-		if($_GET['acao'] == 'up'){ 
-			if(isset($_POST['prod']) && is_array($_POST['prod'])){ 
-				foreach($_POST['prod'] as $id => $qtd){
-						updateCart($id, $qtd);
-				}
-			}
-		} 
-		header('location: carrinho.php');
-	}
-
-	$resultsCarts = getContentCart($pdoConnection);
-	$totalCarts  = getTotalCart($pdoConnection);
-
-
+<?php
+session_start();          
+          if(!isset($_SESSION['carrinho'])){
+         $_SESSION['carrinho'] = array();
+      }
+        
+      //adiciona produto
+        
+      if(isset($_GET['acao'])){
+           
+ 
+          //ADICIONAR CARRINHO
+          if($_GET['acao'] == 'add'){
+          $id = intval($_GET['id_produto']);
+          if(!isset($_SESSION['carrinho'][$id])){
+          $_SESSION['carrinho'][$id] = 1;
+          header("location: carrinho.php");
+          }else{
+          $_SESSION['carrinho'][$id] += 1;
+          header("location: carrinho.php");
+          }
+          }
+           
+         //REMOVER CARRINHO
+         if($_GET['acao'] == 'del'){
+            $id = intval($_GET['id_produto']);
+            if(isset($_SESSION['carrinho'][$id])){
+               unset($_SESSION['carrinho'][$id]);
+            }
+         }
+           
+         //ALTERAR QUANTIDADE
+         if($_GET['acao'] == 'up'){
+            if(is_array($_POST['produto'])){
+               foreach($_POST['produto'] as $id => $qtd){
+                  $id  = intval($id);
+                  $qtd = intval($qtd);
+                  if(!empty($qtd) || $qtd <> 0){
+                     $_SESSION['carrinho'][$id] = $qtd;
+                  }else{
+                     unset($_SESSION['carrinho'][$id]);
+                  }
+               }
+            }
+         }
+        
+      }         
+           
+    ?>
+<?php include_once "functions.php";
+$uri = $_SERVER['PHP_SELF'];
+$busca_title = mysqli_query($conexao, "SELECT * FROM produto WHERE url='$uri' limit 1");
+ 
+while($title = mysqli_fetch_array($busca_title)){
+    $titulos = $title['title'];    
+}
 ?>
-
 <!DOCTYPE html>
-<html lang="br">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="descrição" content="">
-  <meta name="autor" content="">
-
-  <title>Confeitaria Four'ls</title>
-
-  <!-- Custom fonts for this theme (botar link css quando estiver pronto)-->
-  <link href="carrinho.css" rel="stylesheet" type="text/css">
-
-  <!-- Theme CSS -->
-  <link href="carrinho.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
-  
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-          <img class="logo" src="logo.png" height="100" width="100"> 
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../cardapio/cardapio.html">Cardápio</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#sobrenos">Sobre nós</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
-              </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
-
-      <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Confeitaria - Gostosuras - Doces</p>
-
-    </div>
-  </header>
- <br>
- <br>
- <br>
- <br>
- <br>
-
- <div style="display: block; margin: 100px;">
-  
- <?php if($resultsCarts) : ?>
-        <form action="carrinho.php?acao=up" method="post">
-        <table class="table table-strip">
-          <thead>
-            <tr>
-              <th>Produto</th>
-              <th>Quantidade</th>
-              <th>Preço</th>
-              <th>Subtotal</th>
-              <th>Ação</th>
-
-            </tr>				
-          </thead>
-          <tbody>
-            <?php foreach($resultsCarts as $result) : ?>
-            <tr>
-              
-              <td><?php echo $result['name']?></td>
-              <td>
-                <input type="text" name="prod[<?php echo $result['id']?>]" value="<?php echo $result['quantity']?>" size="1" />
-                              
-                </td>
-              <td>R$<?php echo number_format($result['price'], 2, ',', '.')?></td>
-              <td>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?></td>
-              <td><a href="carrinho.php?acao=del&id=<?php echo $result['id']?>" class="btn btn-danger">Remover</a></td>
-              
-            </tr>
-          <?php endforeach;?>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title><?php echo $titulos; ?></title>
+        <link rel="stylesheet" type="text/css" href="carrinho.css"/>
+        <script> 
+            function mudafoto1(){
+            document.getElementById("foto").src = "<?php echo $prod_img1; ?>";
+            }
+            function mudafoto2(){
+            document.getElementById("foto").src = "<?php echo $prod_img2; ?>";
+            }
+            function mudafoto3(){
+            document.getElementById("foto").src = "<?php echo $prod_img3; ?>";
+            }
+            function mudafoto4(){
+            document.getElementById("foto").src = "<?php echo $prod_img4; ?>";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container clearfix">
+            <header id="cabecalho">
+                <div class="central">
+                    <div class="logo">
+                        <a href="index.php"><img src="img/logotipo.jpg" alt="www.sualoja.com.br"/></a>
+                    </div>
+                    <form class="searchbar" method="get" action="busca.php">
+                        <input type="text" class="cx-busca" name="busca" placeholder="Digite o que você procura"/>
+                        <input type="image" src="img/magnifier.png" class="btn-busca" name="buscar" value="Buscar"/>
+                    </form>                
+                    <div class="login">
+                        <?php
+                            if(empty($_SESSION['usuario'])){
+                            echo "<p><a href='login.php'>Login</a> | <a href='login.php'>Cadastre-se</a></p>";
+                            }else{
+                            echo "Seja bem Vindo ".$_SESSION['usuario'];
+                            echo "<p><a href='#'>Meus Pedidos</a> | <a href='#'>Minha Conta</a></p>";
+                            echo "<a href='sair.php'>Sair</a>";
+                            }
+                        ?>
+                    </div>
+                    <nav id="menu">                        
+                        <div class="paginas-menu">
+                            <?php
+                            $sql_menu = "SELECT * FROM menu";
+                            $busca_menu = mysqli_query($conexao, $sql_menu);
+                                while($row_menu = mysqli_fetch_array($busca_menu)){
+                                    $nome = $row_menu['nome'];
+                                    $pagina = $row_menu['pagina'];
+                                    echo "<a href='$pagina'><div class='menu'>$nome</div></a>";
+                                }
+                            ?>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="interface">
+                <table class="tabela-carrinho">
+                <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
+                    <thead>
           <tr>
-            <td colspan="3" class="text-right"><b>Total: </b></td>
-            <td>R$<?php echo number_format($totalCarts, 2, ',', '.')?></td>
-            <td></td>
+            <th width="244">Produto</th>
+            <th width="79">Quantidade</th>
+            <th width="89">Preço</th>
+            <th width="100">SubTotal</th>
+            <th width="64">Remover</th>
           </tr>
-          </tbody>
-          
-        </table>
-
-        <a class="btn btn-info" href="../cardapio/cardapio.php">Continuar Comprando</a>
-        <button class="btn btn-primary" type="submit">Atualizar Carrinho</button>
-
+    </thead>
+            <form action="?acao=up" method="post">
+    <tfoot>
+           <tr>
+            <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
+            <tr>
+            <td colspan="5"><a href="index.php">Continuar Comprando</a></td>
+    </tfoot>
+       
+    <tbody>
+               <?php
+                     if(count($_SESSION['carrinho']) == 0){
+                        echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
+                     }else{
+                        require("functions.php");
+                                                               $total = 0;
+                        foreach($_SESSION['carrinho'] as $id => $qtd){
+                              $sql   = "SELECT *  FROM produtos WHERE id= '$id'";
+                              $qr    = mysqli_query($conexao, $sql) or die(mysql_error());
+                              $ln    = mysqli_fetch_assoc($qr);
+                                
+                              $nome  = $ln['nome'];
+                              $preco = $ln['valor'];
+                              $sub   = $ln['valor'] * $qtd;
+                                
+                              $total += $ln['valor'] * $qtd;
+                             
+                           echo '<tr>       
+                                 <td>'.$nome.'</td>
+                                 <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
+                                 <td>R$ '.$preco.'</td>
+                                 <td>R$ '.$sub.'</td>
+                                 <td><a href="?acao=del&id='.$id.'">Remove</a></td>
+                              </tr>';
+                        }
+                           $total = $total;
+                           echo '<tr>
+                                    <td colspan="4">Total</td>
+                                    <td>R$ '.$total.'</td>
+                              </tr>';
+                     }
+               ?>
+     
+     </tbody>
         </form>
-    <?php endif?>
-
-  <footer class="footer text-center">
-    <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-5 mb-lg-0">
-      <h4 class="text-uppercase mb-4">Localização</h4>
-      <p class="lead mb-0">Rua Caviana
-      <br>396, casa 7 - Taquara,JPA</p>
-  </div>
-</div>
-</div>
+            </table>
+        </div>
+        <?php include_once 'footer.php'; ?>
+    </body>
+</html>
