@@ -65,13 +65,15 @@
   <table>
         <tr>
           <th>
-            Nome
           </th>
           <th>
-            Descricao
+            Nome:
           </th>
           <th>
-            Preco
+            Descrição:
+          </th>
+          <th>
+            Preço:
           </th>
           <th>
           </th>
@@ -87,6 +89,9 @@
 
 
       <tr>
+        <td>
+          <img src="../../Imagens_Produtos/<?php echo $produto['id_produto'];?>/<?php echo $produto['imagem'];?>"  />
+        </td>
         <td>
           <?php echo $produto['nomepro']; ?>
         </td>

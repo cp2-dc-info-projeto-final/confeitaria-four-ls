@@ -3,7 +3,7 @@
     function buscarProdutos() {
         $conexao = new PDO('mysql:host=localhost;dbname=confeitariafourls',"root","");
 
-        $select = $conexao->prepare("SELECT id_produto, nomepro, descricao, preco FROM produto");
+        $select = $conexao->prepare("SELECT id_produto, nomepro, descricao, preco, imagem FROM produto");
         $select->execute();
 
 
