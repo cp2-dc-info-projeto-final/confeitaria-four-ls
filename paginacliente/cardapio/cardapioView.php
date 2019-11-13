@@ -35,7 +35,7 @@
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.html">Meu carrinho</a>
+                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
               </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
@@ -102,7 +102,7 @@
           <?php echo "R$ " . number_format($produto['preco'],2,",",".") ?>
         </td>
         <td>
-          <a href="../carrinho/carrinho.php?acao=add&id=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
+          <a href="../carrinho/carrinho.php?acao=add&id_produto=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
           
         </td>
       </tr>
