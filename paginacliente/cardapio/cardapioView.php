@@ -103,6 +103,7 @@
         </td>
         <td>
           <a href="../carrinho/carrinho.php?acao=add&id=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
+          
         </td>
       </tr>
   <?php    
