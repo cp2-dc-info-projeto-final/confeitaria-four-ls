@@ -107,12 +107,6 @@
   </table>
   </div>
   
-      
-
-<!-- 
-  <php
--->
-  
 
   <footer class="footer text-center">
     <div class="container">
