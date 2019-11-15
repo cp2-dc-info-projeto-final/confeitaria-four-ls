@@ -54,20 +54,6 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title><?php echo $titulos; ?></title>
         <link rel="stylesheet" type="text/css" href="carrinho.css"/>
-        <script> 
-            function mudafoto1(){
-            document.getElementById("foto").src = "<?php echo $prod_img1; ?>";
-            }
-            function mudafoto2(){
-            document.getElementById("foto").src = "<?php echo $prod_img2; ?>";
-            }
-            function mudafoto3(){
-            document.getElementById("foto").src = "<?php echo $prod_img3; ?>";
-            }
-            function mudafoto4(){
-            document.getElementById("foto").src = "<?php echo $prod_img4; ?>";
-            }
-        </script>
         <style>
         .tabela-carrinho {
           margin: 150px;
