@@ -37,8 +37,14 @@ imagem VARCHAR(250)
 );
 
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Bolo de cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/2/bolocenoura.jpg")
-
+VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/1/bolocenoura.jpg")
+VALUES ("Bem Casados", "Preço por unidade",1.20, "../Imagens_Produtos/2/bemcasados.jpg")
+VALUES ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porçôes",20.00 , "../Imagens_Produtos/3/bolodebrigadeiro.jpg")
+VALUES ("Pavê", "Rende 6 porções", 15.00 ,"../Imagens_Produtos/4/pave.jpg")
+VALUES ("Macarons Recheados", "Preço por unidade", 1.50 , "../Imagens_Produtos/5/macaronsrecheados.jpg")
+VALUES ("CakePop", "Delicioso bolo no palito. Preço por unidade", 1.00 , "../Imagens_Produtos/6/cakepop.jpg")
+VALUES ("Doces Finos", "Doces finos para festas. Preço por unidade",2.00, "../Imagens_Produtos/7/docesfinos.jpg")
+VALUES ("Ovo Recheado", "Ovo recheado com chocolate e frutas",30.00 , "../Imagens_Produtos/8/ovorecheado.jpg")
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
