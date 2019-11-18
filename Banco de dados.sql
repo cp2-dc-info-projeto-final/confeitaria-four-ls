@@ -11,7 +11,6 @@ CREATE TABLE cliente(
 id_cliente INT NOT NULL PRIMARY KEY,
 nome VARCHAR (50),
 sexo VARCHAR (10),
-DDD VARCHAR (2),
 telefone VARCHAR (11),
 endereco VARCHAR (100),
 cidade VARCHAR (50),
