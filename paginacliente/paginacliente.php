@@ -85,80 +85,14 @@
 
       <!-- Cardápio Grid Items -->
       <div class="row">
-
-        <!-- Cardápio Item 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img" src="pudim.jpg" alt="Pudim" height="300" width="300">
-          </div>
-        </div>
-
-        <!-- Cardápio Item 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cardapio-item mx-auto" data-toggle="modal" data-target="#cardapioModal2">
-            <div class="cardapio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="cardapio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img" src="bolo.jpg" alt="Bolo" height="300" width="300">
-          </div>
-        </div>
-        <!-- Cardápio Item 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cardapio-item mx-auto" data-toggle="modal" data-target="#cardapioModal3">
-            <div class="cardapio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="cardapio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img" src="sonho.jpg" alt="Sonhos" height="300" width="300">
-          </div>
-        </div>
-
-        <!-- Cardápio Item 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cardapio-item mx-auto" data-toggle="modal" data-target="#cardapioModal3">
-            <div class="cardapio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="cardapio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img" src="macarons.jpg" alt="Macarons" height="300" width="300">
-          </div>
-        </div>
-
-        <!-- Cardápio Item 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cardapio-item mx-auto" data-toggle="modal" data-target="#cardapioModal3">
-            <div class="cardapio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="cardapio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img" src="trufa.jpg" alt="Trufa" height="300" width="300">
-          </div>
-        </div>
-
-        <!-- Cardápio Item 6 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cardapio-item mx-auto" data-toggle="modal" data-target="#cardapioModal3">
-            <div class="cardapio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="cardapio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img" src="ovo_recheado.jpg" alt="Ovo recheado" height="300" width="300">
-          </div>
-        </div>
-
-      </div>
-      <!-- /.row -->
+ <?php
+   REQUIRE "pclienteCTRL.php";
+  foreach ($produtos as $key ) {
+    echo "<img src='$key' >";
+  };
+ ?>
+</div>
+  
 
     </div>
     <br>
