@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
 id_cliente INT NOT NULL PRIMARY KEY,
 nome VARCHAR (50),
+cpf VARCHAR (11)
 sexo VARCHAR (10),
 telefone VARCHAR (11),
 endereco VARCHAR (100),
