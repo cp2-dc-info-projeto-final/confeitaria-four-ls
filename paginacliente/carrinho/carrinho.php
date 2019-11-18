@@ -66,6 +66,7 @@ session_start();
         </style>
     </head>
     <body id="page-top">
+  
 
   
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -106,10 +107,18 @@ session_start();
     </div>
   </header>
     <div class="interface">
-      <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
+      <br>
+      <br>
+      <caption><h2 class="detalhes">Ótima escolha!</h1></caption>
+      <center>
+         <h3>Obrigado por comprar na Confeitaria Four'ls!
+         Preencha os campos abaixo para efetivar a compra.</h3>
+      </center>
         <table class="tabela-carrinho">
     <form name="carrinho" method="post" action="carrinhoCTRL.php">
+  
     <thead>
+    
           <tr>
             <th width="244">Produto</th>
             <th width="79">Quantidade</th>
@@ -117,7 +126,8 @@ session_start();
             <th width="100">SubTotal</th>
             <th width="64">Remover</th>
           </tr>
-    </thead>       
+   
+    </thead>  
     <tbody>
         <?php
             require_once "connection.php";
@@ -169,6 +179,8 @@ session_start();
 
      </tbody>
      <tfoot>
+       <br>
+       <br>
           <tr>
           <td><label for="cpf">Digite o CPF para a identificação na entrega:</label><br>
           <input id="cpf" name="cpf" required="required" type="text" maxlength="60"></td>
@@ -180,6 +192,11 @@ session_start();
             echo "<br><b>$erro</b>";
         }
             ?>
+          <br>
+          <br>
+          <br>
+          <br>
+
             <tr>
             <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
     </tfoot>
