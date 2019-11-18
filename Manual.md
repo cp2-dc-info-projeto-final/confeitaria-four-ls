@@ -74,4 +74,4 @@ Para saber mais sobre nosso endereço e redes sociais, basta ir em "Fale conosco
 
 Além disso,no final da página você pode encontrar nosso endereço.
 
-![Contato](../prints/contato.png)
+![Contato](../prints/contato.png) 
