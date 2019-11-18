@@ -81,11 +81,11 @@
       </div>
 
       <!-- Cardápio Grid Items -->
-      <div class="row">
+      <div class="row" name=>
  <?php
    REQUIRE "pclienteCTRL.php";
   foreach ($produtos as $key ) {
-    echo "<img src='$key' >";
+   echo "<img src='$key' >" ;
   };
  ?>
 </div>
@@ -164,10 +164,13 @@
 
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
+        <center>
           <h4 class="text-uppercase mb-4">Localização</h4>
           <p class="lead mb-0">Rua Caviana
             <br>396, casa 7 - Taquara,JPA</p>
+        </center>
         </div>
+        
 
 
       </div>

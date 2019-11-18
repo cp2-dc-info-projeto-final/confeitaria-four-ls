@@ -9844,3 +9844,7 @@
     background-color: #1a252f;
   }
   
+  .img{
+    float: right;
+    width: 30%;
+  }
