@@ -35,7 +35,7 @@
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.html">Meu carrinho</a>
+                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
               </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
@@ -65,13 +65,15 @@
   <table>
         <tr>
           <th>
-            Nome
           </th>
           <th>
-            Descricao
+            Nome:
           </th>
           <th>
-            Preco
+            Descrição:
+          </th>
+          <th>
+            Preço:
           </th>
           <th>
           </th>
@@ -88,6 +90,9 @@
 
       <tr>
         <td>
+          <img src="../../Imagens_Produtos/<?php echo $produto['id_produto'];?>/<?php echo $produto['imagem'];?>"  />
+        </td>
+        <td>
           <?php echo $produto['nomepro']; ?>
         </td>
         <td>
@@ -97,7 +102,8 @@
           <?php echo "R$ " . number_format($produto['preco'],2,",",".") ?>
         </td>
         <td>
-          <a href="paginacliente/carrinho/carrinho.php?acao=add&id=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
+          <a href="../carrinho/carrinho.php?acao=add&id_produto=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
+          
         </td>
       </tr>
   <?php    
@@ -106,12 +112,6 @@
 
   </table>
   </div>
-  
-      
-
-<!-- 
-  <php
--->
   
 
   <footer class="footer text-center">

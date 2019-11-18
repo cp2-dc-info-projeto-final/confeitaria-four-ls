@@ -134,4 +134,8 @@
 2. Ao se direcionar haverá uma lista com todos os produtos.
 3. Ao lado de cada um,haverá o botão "exluir".
 4. Ao aperta-lo aparecerá uma mensagem de confirmacão de exclusão.
+<<<<<<< HEAD
 5. Ao confirmar,o item será excluido.
+=======
+5. Ao confirmar,o item será excluido.
+>>>>>>> ed4f0393e768ac3cf27f29c5610f39bb0f30c2c5

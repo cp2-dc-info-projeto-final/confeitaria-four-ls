@@ -29,21 +29,22 @@ FOREIGN KEY(id_admin) REFERENCES usuario(id)
 
 DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
-id_produto INT NOT NULL PRIMARY KEY AUTO_INCREME NT,
-nomepro VARCHAR (50)
+id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nomepro VARCHAR (50),
 descricao VARCHAR(300),
 preco FLOAT,
 imagem VARCHAR(250)
 );
 
-INSERT INTO produto (nomepro, descricao, preco) VALUES
-('Bolo de Cenoura', 'Aquele gostoso com calda de chocolate', 10.0),
-('Bolo de abacaxi', 'Aquele gostoso com calda de abacaxi', 10.0),
-('Bolo de baunilha', 'Aquele gostoso sem calda', 10.0),
-('Bolo de chocolate', 'Aquele gostoso com calda de chocolate', 10.0),
-('Bolo de fubá', 'Aquele gostoso com calda de coco', 10.0),
-('Bolo de banana', 'Aquele gostoso com calda de banana', 10.0);
-
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/1/bolocenoura.jpg")
+VALUES ("Bem Casados", "Preço por unidade",1.20, "../Imagens_Produtos/2/bemcasados.jpg")
+VALUES ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porçôes",20.00 , "../Imagens_Produtos/3/bolodebrigadeiro.jpg")
+VALUES ("Pavê", "Rende 6 porções", 15.00 ,"../Imagens_Produtos/4/pave.jpg")
+VALUES ("Macarons Recheados", "Preço por unidade", 1.50 , "../Imagens_Produtos/5/macaronsrecheados.jpg")
+VALUES ("CakePop", "Delicioso bolo no palito. Preço por unidade", 1.00 , "../Imagens_Produtos/6/cakepop.jpg")
+VALUES ("Doces Finos", "Doces finos para festas. Preço por unidade",2.00, "../Imagens_Produtos/7/docesfinos.jpg")
+VALUES ("Ovo Recheado", "Ovo recheado com chocolate e frutas",30.00 , "../Imagens_Produtos/8/ovorecheado.jpg")
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

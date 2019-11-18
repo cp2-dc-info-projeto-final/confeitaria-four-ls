@@ -44,6 +44,5 @@ Assim como o cardapio,há 2 formas de acessar nossa história.
 ou
 2. Rolando a página para baixo.
 
-![Sobre nós](../prints/Sobre-nos.png)
-
+![Sobre nós](../prints/Sobre-nos.png) 
 

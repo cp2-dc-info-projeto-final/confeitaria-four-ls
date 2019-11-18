@@ -1,57 +1,71 @@
-<?php 
-	session_start();
-	require_once "functions/product.php";
-	require_once "functions/cart.php";
+<?php
+session_start();          
+      if(!isset($_SESSION['carrinho'])){
+         $_SESSION['carrinho'] = array();
+      }
+        
+      //adiciona produto
+        
+      if(isset($_GET['acao'])){
+           
+ 
+          //ADICIONAR CARRINHO
+          if($_GET['acao'] == 'add'){
+            $id = intval($_GET['id_produto']);
+            if(!isset($_SESSION['carrinho'][$id])){
+              $_SESSION['carrinho'][$id] = 1;
+              header("location: carrinho.php");
+            }else{
+              $_SESSION['carrinho'][$id] += 1;
+              header("location: carrinho.php");
+            }
+          }
 
-	$pdoConnection = require_once "connection.php";
-
-	if(isset($_GET['acao']) && in_array($_GET['acao'], array('add', 'del', 'up'))) {
-		
-		if($_GET['acao'] == 'add' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
-			addCart($_GET['id'], 1);			
-		}
-
-		if($_GET['acao'] == 'del' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
-			deleteCart($_GET['id']);
-		}
-
-		if($_GET['acao'] == 'up'){ 
-			if(isset($_POST['prod']) && is_array($_POST['prod'])){ 
-				foreach($_POST['prod'] as $id => $qtd){
-						updateCart($id, $qtd);
-				}
-			}
-		} 
-		header('location: carrinho.php');
-	}
-
-	$resultsCarts = getContentCart($pdoConnection);
-	$totalCarts  = getTotalCart($pdoConnection);
-
-
-?>
-
+          // DECREMENTAR DO CARRINHO
+          if($_GET['acao'] == 'down'){
+            $id = intval($_GET['id_produto']);
+            if(isset($_SESSION['carrinho'][$id])){
+              $_SESSION['carrinho'][$id] = $_SESSION['carrinho'][$id] - 1;
+              if ($_SESSION['carrinho'][$id] == 0)
+              {
+                unset($_SESSION['carrinho'][$id]);
+              }
+            header("location: carrinho.php");
+            }
+          }
+           
+         //REMOVER CARRINHO
+         if($_GET['acao'] == 'del'){
+            $id = intval($_GET['id_produto']);
+            if(isset($_SESSION['carrinho'][$id])){
+              unset($_SESSION['carrinho'][$id]);
+            }
+         }
+           
+        
+      }         
+           
+    ?>
 <!DOCTYPE html>
-<html lang="br">
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title><?php echo $titulos; ?></title>
+        <link rel="stylesheet" type="text/css" href="carrinho.css"/>
+        <style>
+        .tabela-carrinho {
+          margin: 150px;
+        }
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="descrição" content="">
-  <meta name="autor" content="">
-
-  <title>Confeitaria Four'ls</title>
-
-  <!-- Custom fonts for this theme (botar link css quando estiver pronto)-->
-  <link href="carrinho.css" rel="stylesheet" type="text/css">
-
-  <!-- Theme CSS -->
-  <link href="carrinho.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
+        h2{
+          margin: 90px;
+          text-align: center;
+        }
+        </style>
+    </head>
+    <body id="page-top">
 
   
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -61,17 +75,18 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../cardapio/cardapio.html">Cardápio</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#sobrenos">Sobre nós</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
               </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
+              </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
           </li>
+         
         </ul>
       </div>
     </div>
@@ -90,64 +105,78 @@
 
     </div>
   </header>
- <br>
- <br>
- <br>
- <br>
- <br>
-
- <div style="display: block; margin: 100px;">
-  
- <?php if($resultsCarts) : ?>
-        <form action="carrinho.php?acao=up" method="post">
-        <table class="table table-strip">
-          <thead>
-            <tr>
-              <th>Produto</th>
-              <th>Quantidade</th>
-              <th>Preço</th>
-              <th>Subtotal</th>
-              <th>Ação</th>
-
-            </tr>				
-          </thead>
-          <tbody>
-            <?php foreach($resultsCarts as $result) : ?>
-            <tr>
-              
-              <td><?php echo $result['name']?></td>
-              <td>
-                <input type="text" name="prod[<?php echo $result['id']?>]" value="<?php echo $result['quantity']?>" size="1" />
-                              
-                </td>
-              <td>R$<?php echo number_format($result['price'], 2, ',', '.')?></td>
-              <td>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?></td>
-              <td><a href="carrinho.php?acao=del&id=<?php echo $result['id']?>" class="btn btn-danger">Remover</a></td>
-              
-            </tr>
-          <?php endforeach;?>
+    <div class="interface">
+      <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
+        <table class="tabela-carrinho">
+                
+                    <thead>
           <tr>
-            <td colspan="3" class="text-right"><b>Total: </b></td>
-            <td>R$<?php echo number_format($totalCarts, 2, ',', '.')?></td>
-            <td></td>
+            <th width="244">Produto</th>
+            <th width="79">Quantidade</th>
+            <th width="89">Preço</th>
+            <th width="100">SubTotal</th>
+            <th width="64">Remover</th>
           </tr>
-          </tbody>
-          
-        </table>
+    </thead>       
+    <tbody>
+        <form action="?acao=up" method="post">
+        <?php
+            require_once "connection.php";
+              if(count($_SESSION['carrinho']) == 0){
+                echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
+              }else{
+                $total = 0;
+                $conexao = getConnection();
+                foreach($_SESSION['carrinho'] as $id => $qtd){
+                      try {
+                        $sql   = "SELECT id_produto, nomepro, descricao, preco, imagem FROM produto WHERE id_produto = :id_produto";
+                        $query = $conexao->prepare($sql);
+                        $query->bindParam(":id_produto", $id);
+                        $query->execute();
+                        $row = $query->fetch();
+                    
+                        
+                        $nome = $row["nomepro"];
+                        $preco = $row["preco"];
+                        $sub = $row["preco"] * $qtd;
+                          
+                        $total += $sub;
 
-        <a class="btn btn-info" href="../cardapio/cardapio.php">Continuar Comprando</a>
-        <button class="btn btn-primary" type="submit">Atualizar Carrinho</button>
+                      } catch( PDOExecption $e ) { 
+                          die("Erro ao buscar carrinho! " . $e->getMessage());
+                      } 
 
+                      
+                      
+                    echo '<tr>       
+                          <td>'.$nome . '</td>
+                          <td>
+                          <a href="?acao=down&id_produto='.$id.'">-</a>
+                          <input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" />
+                          <a href="?acao=add&id_produto='.$id.'">+</a></td>
+                          <td>R$ '.$preco.'</td>
+                          <td>R$ '.$sub.'</td>
+                          <td><a href="?acao=del&id_produto='.$id.'">Remover</a></td>
+
+                      </tr>';
+                }
+                    $total = $total;
+                    echo '<tr>
+                            <td colspan="4">Total</td>
+                            <td>R$ '.$total.'</td>
+                      </tr>';
+              }
+        ?>
+
+     </tbody>
+     <tfoot>
+           <tr>
+            <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
+            <tr>
+            <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
+    </tfoot>
         </form>
-    <?php endif?>
-
-  <footer class="footer text-center">
-    <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-5 mb-lg-0">
-      <h4 class="text-uppercase mb-4">Localização</h4>
-      <p class="lead mb-0">Rua Caviana
-      <br>396, casa 7 - Taquara,JPA</p>
-  </div>
-</div>
-</div>
+            </table>
+        </div>
+    </body>
+</html>
