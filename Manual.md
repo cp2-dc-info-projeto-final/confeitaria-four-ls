@@ -1,4 +1,3 @@
-
 # MANUAL DE UTILIZAÇÃO 
 
 ## Primeiros passos
@@ -7,7 +6,7 @@ Ao entrar no site da CONFEITARIA FOUR'LS o usuario verá nosso lindo logo,além 
 
 Rolando nossa página inicial o usuário poderá ver nosso maravilhoso cardapio,um pouco mais de nossa história,endereço e alguns dos modos de entar em contato conosco.
 
-![Página inicial](../prints/tela-inicio.png)
+![Página inicial](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/tela-inicio.png)
 
 
 ## se cadastrando
@@ -18,7 +17,7 @@ Ao clicar ele será redirecionado para a página de login,página esta que ele u
 
 No canto inferior direito o usuário verá a seguinte mensagem "Cadastre-se agora mesmo".
 
-![login](../prints/login.png)
+![login](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/login.png)
 
 Ele deverá clicar ali.Assim sendo redirecionado para nossa página de cadastro.
 
@@ -28,7 +27,7 @@ Assim,basta clicar em "concluir meu cadastro" e pronto.
 
 Caadastro feito.
 
-![Cadastro](../prints/Cadastro.png)
+![Cadastro](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/Cadastro.png)
 
 ## Como logar
 
@@ -38,7 +37,7 @@ Basta clicar em login,no canto superior direito da barra de menu e inserir e-mai
 
 Pronto.
 
-![login](../prints/login.png)
+![login](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/login.png)
 
 ## Ver nosso cardapio
 
@@ -66,7 +65,7 @@ ou
 
 2. Rolando a página para baixo.
 
-![Sobre nós](../prints/Sobre-nos.png) 
+![Sobre nós](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/Sobre-nos.png) 
 
 ## Contato 
 
@@ -74,4 +73,4 @@ Para saber mais sobre nosso endereço e redes sociais, basta ir em "Fale conosco
 
 Além disso,no final da página você pode encontrar nosso endereço.
 
-![Contato](../prints/contato.png) 
+![Contato](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/contato.png) 
