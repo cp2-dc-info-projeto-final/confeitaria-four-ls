@@ -56,10 +56,7 @@
         <label for="confsenha">Confirmar senha:</label><br>
           <input id="confsenha" name="confirmaSenha" required="required" type="password" maxlength="12">
         </p>
-        <p>
-          <td colspan="2"><input name="news" required="required" type="checkbox" value="ATIVO" checked>
-    Desejo receber novidades e informações sobre o conteúdo deste site. </td>
-        </p>
+
         <p>
             <input name="cadastrar" required="required" type="submit" value="Concluir meu Cadastro"> 
            
@@ -69,7 +66,7 @@
             $erro = $_SESSION["erro"];
             echo "<br><b>$erro</b>";
         }
-    ?>
+            ?>
 
             <br>
             <input name="limpar" required="required" type="reset" value="Limpar Campos preenchidos">
