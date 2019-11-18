@@ -1,6 +1,6 @@
 <?php
     
-    Function fazercadastro($nome, $email, $senha, $confirmasenha, $sexo, $telefone, $cidade, $endereco, $bairro) {
+    Function fazercadastro($nome,$cpf, $email, $senha, $confirmasenha, $sexo, $telefone, $cidade, $endereco, $bairro) {
        
         $connection = mysqli_connect("localhost", "root", "", "confeitariafourls");
      
@@ -28,8 +28,8 @@
 
         $user_id = mysqli_insert_id($connection);
 
-        $sql = "INSERT INTO cliente (id_cliente, nome, sexo, telefone, cidade, endereco, bairro)
-        VALUES ($user_id,'$nome', '$sexo','$telefone','$cidade', '$endereco','$bairro')";
+        $sql = "INSERT INTO cliente (id_cliente, nome, cpf, sexo, telefone, cidade, endereco, bairro)
+        VALUES ($user_id,'$nome','$cpf', '$sexo','$telefone','$cidade', '$endereco','$bairro')";
         if(mysqli_query($connection, $sql)){
             return true;
         }else{

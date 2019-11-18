@@ -2,6 +2,7 @@
 
     Require "cadastro.php";
     $nome = $_POST["nome"];
+    $cpf = $_POST["cpf"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $confirma_senha = $_POST["confirmaSenha"];
@@ -21,7 +22,7 @@
 
     else{
 
-        if (fazercadastro($nome, $email, $senha, $confirma_senha, $sexo, $telefone, $cidade, $endereco, $bairro)) {
+        if (fazercadastro($nome, $cpf, $email, $senha, $confirma_senha, $sexo, $telefone, $cidade, $endereco, $bairro)) {
             session_unset();
             header("Location: ../login/loginview.php");
             exit();
