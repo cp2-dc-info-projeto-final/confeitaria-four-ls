@@ -170,8 +170,8 @@ session_start();
      </tbody>
      <tfoot>
           <tr>
-          <td><label for="nome">Digite um nome para identificação na entrega:</label><br>
-          <input id="nome" name="nome" required="required" type="text" maxlength="60"></td>
+          <td><label for="cpf">Digite o CPF para a identificação na entrega:</label><br>
+          <input id="cpf" name="cpf" required="required" type="text" maxlength="60"></td>
            <tr>
             <td colspan="5"><input name="comprar" required="required" type="submit" value="Concluir minha compra">
             <?php

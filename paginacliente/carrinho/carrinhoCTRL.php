@@ -1,14 +1,14 @@
 <?php
 
     Require "carrinhoModel.php";
-    $nome = $_POST["nome"];
+    $cpf = $_POST["cpf"];
     $nomepro = $_POST["nomepro"];
     $qtd = $_POST["qtd"];
     $precof = $_POST["total"];
     session_start();
      
 
-        if (fazerpedido($nome,$nomepro,$qtd,$precof)) {
+        if (fazerpedido($cpf,$nomepro,$qtd,$precof)) {
             session_unset();
             header("Location: ../cardapio/cardapioView.php");
             exit();
