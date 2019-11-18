@@ -173,7 +173,14 @@ session_start();
           <td><label for="nome">Digite um nome para identificação na entrega:</label><br>
           <input id="nome" name="nome" required="required" type="text" maxlength="60"></td>
            <tr>
-            <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
+            <td colspan="5"><input name="comprar" required="required" type="submit" value="Concluir minha compra">
+            <?php
+        session_start();
+        if(array_key_exists('erro', $_SESSION) == true){
+            $erro = $_SESSION["erro"];
+            echo "<br><b>$erro</b>";
+        }
+            ?>
             <tr>
             <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
     </tfoot>
