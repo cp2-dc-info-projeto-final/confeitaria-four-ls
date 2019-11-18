@@ -175,7 +175,6 @@ session_start();
            <tr>
             <td colspan="5"><input name="comprar" required="required" type="submit" value="Concluir minha compra">
             <?php
-        session_start();
         if(array_key_exists('erro', $_SESSION) == true){
             $erro = $_SESSION["erro"];
             echo "<br><b>$erro</b>";

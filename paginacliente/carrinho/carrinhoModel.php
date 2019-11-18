@@ -17,8 +17,9 @@
             }
         }else{
             die("Erro $sql. " . mysqli_error($connection));
+        }
 
-        $sql = "INSERT INTO carrinho (nome,nomepro,qtd,precof) VALUES ('$nome','$nomepro','$qtd',$precof)";
+        $sql = "INSERT INTO carrinho (nome,nomepro,qtd,precof) VALUES ('$nome','$nomepro','$qtd','$precof')";
 
         if(!mysqli_query($connection, $sql)) {
             die("Erro $sql. " . mysqli_error($connection));
@@ -28,5 +29,5 @@
     
     }
         
-    ?>
+?>
     
