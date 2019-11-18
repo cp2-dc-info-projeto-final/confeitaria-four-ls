@@ -148,7 +148,7 @@ session_start();
                       
                       
                     echo '<tr>       
-                          <td>'.$nome . '</td>
+                          <td>'.$nomepro . '</td>
                           <td>
                           <a href="?acao=down&id_produto='.$id.'">-</a>
                           <input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" />
