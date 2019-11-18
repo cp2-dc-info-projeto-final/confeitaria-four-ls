@@ -108,8 +108,8 @@ session_start();
     <div class="interface">
       <caption><h2 class="detalhes">Carrinho de Compras</h2></caption>
         <table class="tabela-carrinho">
-                
-                    <thead>
+    <form name="carrinho" method="post" action="carrinhoCTRL.php">
+    <thead>
           <tr>
             <th width="244">Produto</th>
             <th width="79">Quantidade</th>
@@ -119,7 +119,6 @@ session_start();
           </tr>
     </thead>       
     <tbody>
-        <form action="?acao=up" method="post">
         <?php
             require_once "connection.php";
               if(count($_SESSION['carrinho']) == 0){
@@ -136,7 +135,7 @@ session_start();
                         $row = $query->fetch();
                     
                         
-                        $nome = $row["nomepro"];
+                        $nomepro = $row["nomepro"];
                         $preco = $row["preco"];
                         $sub = $row["preco"] * $qtd;
                           
@@ -170,12 +169,16 @@ session_start();
 
      </tbody>
      <tfoot>
+          <tr>
+          <td><label for="nome">Digite um nome para identificação na entrega:</label><br>
+          <input id="nome" name="nome" required="required" type="text" maxlength="60"></td>
            <tr>
             <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
             <tr>
             <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
     </tfoot>
         </form>
+    </form>
             </table>
         </div>
     </body>
