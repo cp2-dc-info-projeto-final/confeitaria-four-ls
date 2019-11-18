@@ -16,6 +16,16 @@
   <!-- Theme CSS -->
   <link href="paginainicial.css" rel="stylesheet">
 
+  <style>
+    #card{
+      width: 285px;
+      height: 285px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+    }
+  </style>
+
+
 </head>
 
 <body id="page-top">
@@ -89,7 +99,7 @@
       <?php
    REQUIRE "pinicialCTRL.php";
   foreach ($produtos as $key ) {
-    echo "<img src='$key' >";
+    echo "<img src='$key' id='card'>";
   };
  ?>
       <!-- /.row -->

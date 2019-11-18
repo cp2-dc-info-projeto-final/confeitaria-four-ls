@@ -16,6 +16,15 @@
   <!-- Theme CSS -->
   <link href="paginacliente.css" rel="stylesheet">
 
+  <style>
+    #card{
+      width: 285px;
+      height: 285px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -82,12 +91,17 @@
 
       <!-- Cardápio Grid Items -->
       <div class="row" name=>
+      
+        
  <?php
    REQUIRE "pclienteCTRL.php";
   foreach ($produtos as $key ) {
-   echo "<img src='$key' >" ;
+   echo "<img src='$key' id='card'>" ;
   };
  ?>
+
+
+
 </div>
   
 

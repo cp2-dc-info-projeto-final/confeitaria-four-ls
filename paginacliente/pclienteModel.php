@@ -9,7 +9,7 @@ function pegafotos(){
     } 
     $result = mysqli_query($conn, $sql);
     $produtos=[];
-    for($i=0; $i<6; $i++){
+    for($i=0; $i<8; $i++){
         $row=mysqli_fetch_assoc($result);
         $produto=$row["imagem"];
        array_push($produtos, $produto);
