@@ -59,26 +59,13 @@ id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 id_produto INT,
 FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );
-
-DROP TABLE IF EXISTS promocao;
-CREATE TABLE promocao(
-id_promo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-data_in DATE,
-data_fim DATE,
-desconto FLOAT
-);
-DROP TABLE IF EXISTS produto_promo;
-CREATE TABLE produto_promo(
-id_promo INT ,
-id_produto INT,
-FOREIGN KEY (id_promo) REFERENCES promocao (id_promo),
-FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
-);
 DROP TABLE IF EXISTS carrinho;
 CREATE TABLE carrinho(
 id_carrinho INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-id_produto INT,
-valor_total FLOAT
+nome VARCHAR(50),
+nomepro INT,
+qtd INT,
+precof FLOAT
 );
 DROP TABLE IF EXISTS produto_carrinho;
 CREATE TABLE produto_carrinho(
