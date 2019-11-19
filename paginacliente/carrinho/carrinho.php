@@ -64,14 +64,14 @@ session_start();
           text-align: 100px;
         }
         .tabela-carrinho {
-          margin: 150px;
+          margin: 100px;
           border: 2px solid black;
           width: 85%;
           height: 50px;
           }
 
-        h2{
-          margin: 90px;
+        h3{
+          margin: 28px;
           text-align: center;
         }
         </style>
@@ -90,10 +90,10 @@ session_start();
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioView.php">Cardápio</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#sobrenos">Sobre nós</a>
+                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#sobrenos">Sobre nós</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
+                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#faleconosco">Fale conosco</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
@@ -120,8 +120,8 @@ session_start();
     <div class="interface">
       <br>
       <br>
-      <caption><h2 class="detalhes">Ótima escolha!</h1></caption>
       <center>
+      <caption><h3 class="detalhes">Ótima escolha!</h3></caption>
          <h3>Obrigado por comprar na Confeitaria Four'ls!
          Preencha os campos abaixo para efetivar a compra.</h3>
       </center>
@@ -167,6 +167,7 @@ session_start();
                       } 
 
                       
+
                       
                     echo '<tr>       
                           <td>'.$nomepro . '</td>
@@ -190,14 +191,6 @@ session_start();
 
      </tbody>
      <tfoot>
-       
-       <center>
-       <br>
-          <label for="cpf"><br><br>Digite o CPF para a identificação na entrega:</label><br>
-          <input id="cpf" name="cpf" required="required" type="text" maxlength="60">
-          
-            <a colspan="5"><input name="comprar" id="concluir"required="required" type="submit" value="Concluir minha compra">
-            </center>
             <?php
         if(array_key_exists('erro', $_SESSION) == true){
             $erro = $_SESSION["erro"];
@@ -205,9 +198,19 @@ session_start();
         }
             ?>
         
+<<<<<<< HEAD
         
             <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioView.php" value="Continuar comprando">
             </td>
+=======
+            <tr>
+              <td>
+                <a href="../cardapio/cardapioView.php"> Continuar Comprando </a>
+              </td>
+              <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../venda.php" value="Concluir encomenda">
+              </td>
+            </tr>
+>>>>>>> 02affde38b491b0868f4671582216dfa3d5a17d0
     </tfoot>
         </form>
     </form>

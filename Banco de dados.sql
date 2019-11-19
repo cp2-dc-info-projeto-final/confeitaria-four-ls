@@ -39,6 +39,7 @@ imagem VARCHAR(250)
 INSERT INTO produto (nomepro, descricao, preco, imagem)
 VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "bolocenoura.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
+<<<<<<< HEAD
 VALUES ("Bem Casados", "Preço por unidade.",1.20, "bemcasados.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
 VALUES ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porções.",20.00 , "bolodebrigadeiro.jpg");
@@ -52,6 +53,21 @@ INSERT INTO produto (nomepro, descricao, preco, imagem)
 VALUES ("Doces Finos", "Doces finos para festas. Preço por unidade.",2.00, "docesfinos.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
 VALUES ("Ovo Recheado", "Ovo recheado com chocolate e frutas.",30.00 , "ovorecheado.jpg");
+=======
+VALUES ("Bem Casados", "Preço por unidade",1.20, "bemcasados.jpg");
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porçôes",20.00 , "bolodebrigadeiro.jpg");
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Pavê", "Rende 6 porções", 15.00 ,"pave.jpg");
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Macarons Recheados", "Preço por unidade", 1.50 , "macaronsrecheados.jpg");
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("CakePop", "Delicioso bolo no palito. Preço por unidade", 1.00 , "cakepop.jpg");
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Doces Finos", "Doces finos para festas. Preço por unidade",2.00, "docesfinos.jpg");
+INSERT INTO produto (nomepro, descricao, preco, imagem)
+VALUES ("Ovo Recheado", "Ovo recheado com chocolate e frutas",30.00 , "ovorecheado.jpg");
+>>>>>>> 02affde38b491b0868f4671582216dfa3d5a17d0
 
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
@@ -60,27 +76,14 @@ id_produto INT,
 FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );
 DROP TABLE IF EXISTS carrinho;
-CREATE TABLE carrinho(
-id_carrinho INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-cpf VARCHAR(50),
-nomepro VARCHAR (50),
-qtd INT,
-precof FLOAT
-);
 DROP TABLE IF EXISTS produto_carrinho;
-CREATE TABLE produto_carrinho(
-id_carrinho INT,
-id_produto INT,
-FOREIGN KEY(id_produto) REFERENCES produto(id_produto),
-FOREIGN KEY(id_carrinho) REFERENCES carrinho (id_carrinho)
-);
 DROP TABLE IF EXISTS venda;
 CREATE TABLE venda(
 id_venda INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-id_produto INT,
+id_cliente INT,
 data_venda DATE,
 hora_venda TIME,
-FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
+FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente)
 );
 DROP TABLE IF EXISTS produto_venda;
 CREATE TABLE produto_venda(
