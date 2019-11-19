@@ -4,10 +4,12 @@
     $senha = $_POST["senha"];
         
     session_start();
-    if (fazerlogin($email, $senha) == true) {
+    if ($usuario = fazerlogin($email, $senha)) {
         session_unset();
         session_start();
-        $_SESSION["nome"] = $row["nome"]; 
+        $_SESSION["nome"] = $usuario["nome"];
+        $_SESSION["email"] = $usuario["email"]; 
+        $_SESSION["id_usuario"] = $usuario["id"]; 
         $_SESSION["admin"]= administrador($email);
         if ($_SESSION["admin"]==true){
         header("Location: ../paginaadm/cardapioadm.php");
