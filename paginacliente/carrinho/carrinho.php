@@ -72,9 +72,12 @@ session_start();
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
+          <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioView.php">Cardápio</a>
+              </li>
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#sobrenos">Sobre nós</a>
               </li>
@@ -84,9 +87,6 @@ session_start();
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
               </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3" href="../perfil/htmlperfil.html">Perfil</a>
-          </li>
          
         </ul>
       </div>
