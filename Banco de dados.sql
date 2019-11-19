@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
 id_cliente INT NOT NULL PRIMARY KEY,
 nome VARCHAR (50),
-cpf VARCHAR (11)
+cpf VARCHAR (11),
 sexo VARCHAR (10),
 telefone VARCHAR (11),
 endereco VARCHAR (100),
@@ -37,7 +37,7 @@ imagem VARCHAR(250)
 );
 
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/1/bolocenouraa.jpg");
+VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/1/bolocenoura.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
 VALUES ("Bem Casados", "Preço por unidade",1.20, "../Imagens_Produtos/2/bemcasados.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
