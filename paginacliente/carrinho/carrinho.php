@@ -64,14 +64,14 @@ session_start();
           text-align: 100px;
         }
         .tabela-carrinho {
-          margin: 150px;
+          margin: 100px;
           border: 2px solid black;
           width: 85%;
           height: 50px;
           }
 
-        h2{
-          margin: 90px;
+        h3{
+          margin: 28px;
           text-align: center;
         }
         </style>
@@ -120,8 +120,8 @@ session_start();
     <div class="interface">
       <br>
       <br>
-      <caption><h2 class="detalhes">Ótima escolha!</h1></caption>
       <center>
+      <caption><h3 class="detalhes">Ótima escolha!</h3></caption>
          <h3>Obrigado por comprar na Confeitaria Four'ls!
          Preencha os campos abaixo para efetivar a compra.</h3>
       </center>
@@ -197,7 +197,7 @@ session_start();
           <input id="cpf" name="cpf" required="required" type="text" maxlength="60">
           
             <a colspan="5"><input name="comprar" id="concluir"required="required" type="submit" value="Concluir minha compra">
-            </center>
+       </center>
             <?php
         if(array_key_exists('erro', $_SESSION) == true){
             $erro = $_SESSION["erro"];
