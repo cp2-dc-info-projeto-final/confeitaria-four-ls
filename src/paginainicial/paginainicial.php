@@ -45,9 +45,6 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#faleconosco">Fale conosco</a>
           </li>
-		   <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#meucarrinho">Meu carrinho</a>
-          </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../login/loginview.php">Login</a>
           </li>
@@ -98,8 +95,9 @@
         
       <?php
    REQUIRE "pinicialCTRL.php";
-  foreach ($produtos as $key ) {
-    echo "<img src='$key' id='card'>";
+  foreach ($produtos as $produto ) {
+    
+    echo "<img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/>";
   };
  ?>
       <!-- /.row -->
@@ -107,6 +105,12 @@
     </div>
   </section>
 
+  <center>
+      <div>
+        <h5><a href="../paginainicial/cardapioinicial.php">Ver mais...</a><h5>
+      </div>
+    </center>
+   
   <!-- Sobre nós  Section -->
   <section class="page-section bg-primary text-white mb-0" id="sobrenos">
     <div class="container">
@@ -151,14 +155,15 @@
       <!-- Fale conosco Section Form -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-            <center>
-                <br>
-              <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h5 class="text-uppercase mb-4">confeitariafourls@gmail.com</h5>
-                </div>
-              </div>
-              </center>
+        <center>
+        <br>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h5 class="text-uppercase mb-4">confeitariafourls@gmail.com</h5>
+            <h5 class="text-uppercase mb-4"> (21) 96452-8193</h5>
+        </div>
+      </div>
+      </center>
               </div>
             </section>
         
