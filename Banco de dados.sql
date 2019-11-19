@@ -37,21 +37,21 @@ imagem VARCHAR(250)
 );
 
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "../Imagens_Produtos/1/bolocenoura.jpg");
+VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "bolocenoura.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Bem Casados", "Preço por unidade",1.20, "../Imagens_Produtos/2/bemcasados.jpg");
+VALUES ("Bem Casados", "Preço por unidade.",1.20, "bemcasados.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porçôes",20.00 , "../Imagens_Produtos/3/bolodebrigadeiro.jpg");
+VALUES ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porções.",20.00 , "bolodebrigadeiro.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Pavê", "Rende 6 porções", 15.00 ,"../Imagens_Produtos/4/pave.jpg");
+VALUES ("Pavê", "Rende 6 porções.", 15.00 ,"pave.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Macarons Recheados", "Preço por unidade", 1.50 , "../Imagens_Produtos/5/macaronsrecheados.jpg");
+VALUES ("Macarons Recheados", "Preço por unidade.", 1.50 , "macaronsrecheados.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("CakePop", "Delicioso bolo no palito. Preço por unidade", 1.00 , "../Imagens_Produtos/6/cakepop.jpg");
+VALUES ("CakePop", "Delicioso bolo no palito. Preço por unidade.", 1.00 , "cakepop.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Doces Finos", "Doces finos para festas. Preço por unidade",2.00, "../Imagens_Produtos/7/docesfinos.jpg");
+VALUES ("Doces Finos", "Doces finos para festas. Preço por unidade.",2.00, "docesfinos.jpg");
 INSERT INTO produto (nomepro, descricao, preco, imagem)
-VALUES ("Ovo Recheado", "Ovo recheado com chocolate e frutas",30.00 , "../Imagens_Produtos/8/ovorecheado.jpg");
+VALUES ("Ovo Recheado", "Ovo recheado com chocolate e frutas.",30.00 , "ovorecheado.jpg");
 
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(

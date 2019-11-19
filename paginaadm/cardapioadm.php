@@ -15,7 +15,11 @@
 
   <!-- Theme CSS -->
   <link href="cardapioadm.css" rel="stylesheet">
-
+ <style>
+ .button{
+   background-color:#e65786;
+ }
+ </style>
 </head>
 
 <body id="page-top">
@@ -25,10 +29,18 @@
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
           <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
-          <input class="button" name="newadm" id="id_admin" type="button" href="../cadastro/cadastroadm.php" value="Cadastrar novo administrador">
-          <input class="button" name="sair" id="sair" type="button" href="../paginainicial.html" value="Sair da conta">
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioView.php">Visualizar cardápio</a>
+          </li>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../paginainicial/paginainicial.php">Sair da Conta</a>
+          </li>
         </div>
     </nav>
+
             <br><br>
             <br><br>
             <br><br>

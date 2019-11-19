@@ -16,7 +16,23 @@
 
   <!-- Theme CSS -->
   <link href="cardapio.css" rel="stylesheet">
+<style>
+.tabela{
+  text-align: center;
+  margin: 100px;
+          border: 3px solid black;
+          width: 80%;
+          height: 40px;
 
+}
+.imagem{
+  width: 300px;
+      height: 300px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+    
+}
+</style>
 </head>
 
 <body id="page-top">
@@ -29,17 +45,12 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="cardapioView.php">Cardápio</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="cardapioViewadm.php">Visualizar cardápio</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#sobrenos">Sobre nós</a>
+                <a class="nav-link py-3 px-0 px-lg-3" href="../paginainicial/paginainicial.php">Sair da conta</a>
               </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.html#faleconosco">Fale conosco</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../carrinho/carrinho.php">Meu carrinho</a>
-              </li>
+              
           
          
         </ul>
@@ -63,23 +74,25 @@
 
   <div style="display: block; margin: 100px;">
 
-  <table>
+  <table class="tabela">
         <tr>
           <th>
           </th>
           <th>
             Nome:
           </th>
+         
           <th>
             Descrição:
           </th>
+         
           <th>
             Preço:
           </th>
           <th>
           </th>
         </tr>
-  <?php
+  <?php 
 
     require_once "cardapioCtrl.php";
 
@@ -91,7 +104,7 @@
 
       <tr>
         <td>
-          <img src="../../Imagens_Produtos/<?php echo $produto['id_produto'];?>/<?php echo $produto['imagem'];?>"  />
+          <img class= "imagem" src="../../Imagens_Produtos/<?php echo $produto['id_produto'];?>/<?php echo $produto['imagem'];?>"  />
         </td>
         <td>
           <?php echo $produto['nomepro']; ?>

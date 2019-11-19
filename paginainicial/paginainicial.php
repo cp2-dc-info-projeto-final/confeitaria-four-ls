@@ -45,9 +45,6 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#faleconosco">Fale conosco</a>
           </li>
-		   <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#meucarrinho">Meu carrinho</a>
-          </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../login/loginview.php">Login</a>
           </li>
@@ -98,8 +95,9 @@
         
       <?php
    REQUIRE "pinicialCTRL.php";
-  foreach ($produtos as $key ) {
-    echo "<img src='$key' id='card'>";
+  foreach ($produtos as $produto ) {
+    
+    echo "<img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/>";
   };
  ?>
       <!-- /.row -->

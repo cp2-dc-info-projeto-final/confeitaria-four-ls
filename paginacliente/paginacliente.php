@@ -93,10 +93,12 @@
       <div class="row" name=>
       
         
- <?php
+   
+      <?php
    REQUIRE "pclienteCTRL.php";
-  foreach ($produtos as $key ) {
-   echo "<img src='$key' id='card'>" ;
+  foreach ($produtos as $produto ) {
+    
+    echo "<img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/>";
   };
  ?>
 
@@ -109,7 +111,7 @@
     <br>
     <center>
       <div>
-        <h5><a href="cardapio/cardapioView.php">Ver mais...</a><h5>
+        <h5><a href="../cardapio/cardapioView.php">Ver mais...</a><h5>
       </div>
     </center>
     <br>
