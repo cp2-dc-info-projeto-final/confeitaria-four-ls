@@ -39,3 +39,7 @@
 
 # Manual de utilização
  + [Manual de utilização](Manual.md)  
+ 
+ # Slides
+
+ + [Slides](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/Slides.pdf)
