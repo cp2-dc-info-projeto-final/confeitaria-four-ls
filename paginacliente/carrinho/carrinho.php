@@ -167,6 +167,7 @@ session_start();
                       } 
 
                       
+
                       
                     echo '<tr>       
                           <td>'.$nomepro . '</td>
@@ -190,14 +191,6 @@ session_start();
 
      </tbody>
      <tfoot>
-       
-       <center>
-       <br>
-          <label for="cpf"><br><br>Digite o CPF para a identificação na entrega:</label><br>
-          <input id="cpf" name="cpf" required="required" type="text" maxlength="60">
-          
-            <a colspan="5"><input name="comprar" id="concluir"required="required" type="submit" value="Concluir minha compra">
-       </center>
             <?php
         if(array_key_exists('erro', $_SESSION) == true){
             $erro = $_SESSION["erro"];
@@ -206,8 +199,12 @@ session_start();
             ?>
         
             <tr>
-            <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioView.php" value="Continuar comprando">
-            </td>
+              <td>
+                <a href="../cardapio/cardapioView.php"> Continuar Comprando </a>
+              </td>
+              <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../venda.php" value="Concluir encomenda">
+              </td>
+            </tr>
     </tfoot>
         </form>
     </form>
