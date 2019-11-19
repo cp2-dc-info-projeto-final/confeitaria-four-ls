@@ -55,9 +55,20 @@ session_start();
         <title><?php echo $titulos; ?></title>
         <link rel="stylesheet" type="text/css" href="carrinho.css"/>
         <style>
+        #cpf{
+          margin: 10px;
+          text-align: 100px;
+        }
+        #concluir{
+          margin: 10px;
+          text-align: 100px;
+        }
         .tabela-carrinho {
           margin: 150px;
-        }
+          border: 2px solid black;
+          width: 85%;
+          height: 50px;
+          }
 
         h2{
           margin: 90px;
@@ -179,26 +190,24 @@ session_start();
 
      </tbody>
      <tfoot>
+       
+       <center>
        <br>
-       <br>
-          <tr>
-          <td><label for="cpf">Digite o CPF para a identificação na entrega:</label><br>
-          <input id="cpf" name="cpf" required="required" type="text" maxlength="60"></td>
-           <tr>
-            <td colspan="5"><input name="comprar" required="required" type="submit" value="Concluir minha compra">
+          <label for="cpf"><br><br>Digite o CPF para a identificação na entrega:</label><br>
+          <input id="cpf" name="cpf" required="required" type="text" maxlength="60">
+          
+            <a colspan="5"><input name="comprar" id="concluir"required="required" type="submit" value="Concluir minha compra">
+            </center>
             <?php
         if(array_key_exists('erro', $_SESSION) == true){
             $erro = $_SESSION["erro"];
             echo "<br><b>$erro</b>";
         }
             ?>
-          <br>
-          <br>
-          <br>
-          <br>
-
+        
             <tr>
-            <td colspan="5"><a href="../cardapio/cardapioView.php">Continuar Comprando</a></td>
+            <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioView.php" value="Continuar comprando">
+            </td>
     </tfoot>
         </form>
     </form>
