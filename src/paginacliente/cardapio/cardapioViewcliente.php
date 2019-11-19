@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php 
 session_start();
   ?>
+=======
+
+>>>>>>> e8d963b34b98037cca3c81dc5ad1c51d409cac06
 <!DOCTYPE html>
 <html lang="br">
 
@@ -147,3 +151,7 @@ session_start();
 </div>
 </div>
 </html>
+<<<<<<< HEAD
+=======
+<?php
+>>>>>>> e8d963b34b98037cca3c81dc5ad1c51d409cac06
