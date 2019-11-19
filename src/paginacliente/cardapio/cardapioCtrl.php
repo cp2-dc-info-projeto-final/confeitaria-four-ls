@@ -1,6 +1,6 @@
 <?php 
 
-    require_once "cardapioModel.php";
+    require "cardapioModel.php";
     
     function buscarProdutosCtrl() {
         

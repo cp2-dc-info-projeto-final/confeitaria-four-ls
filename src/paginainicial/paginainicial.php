@@ -94,7 +94,7 @@
       <div class="row">
         
       <?php
-   REQUIRE "pinicialCTRL.php";
+   include_once "pinicialCTRL.php";
   foreach ($produtos as $produto ) {
     
     echo "<img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/>";
@@ -107,7 +107,7 @@
 
   <center>
       <div>
-        <h5><a href="../paginainicial/cardapioinicial.php">Ver mais...</a><h5>
+        <h5><a href="cardapioinicial.php">Ver mais...</a><h5>
       </div>
     </center>
    

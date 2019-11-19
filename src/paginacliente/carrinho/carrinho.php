@@ -146,7 +146,7 @@ if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){
     </thead>  
     <tbody>
         <?php
-            require_once "connection.php";
+            require_once "../connection.php";
               if(count($_SESSION['carrinho']) == 0){
                 echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
               }else{

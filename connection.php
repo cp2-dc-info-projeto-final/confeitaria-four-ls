@@ -7,6 +7,6 @@
     define("DB_USER", "root");
     define("DB_PASS", "");
     //Conexao com Banco de Dados
-    return new PDO('mysql:host=localhost;dbname=confeitariafourls',"root","");
+    return new PDO('mysql:host=localhost;dbname=confeitariafourls;charset=utf8',"root","");
 
  }
