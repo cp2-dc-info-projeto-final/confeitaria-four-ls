@@ -11,8 +11,8 @@
         $erro = "";
                
         if ($result) {
-            if (mysqli_num_rows($result) == 0) {
-                return false;
+            if (mysqli_num_rows($result) > 0) {
+                return true;
             }
         }else{
             die("Erro $sql. " . mysqli_error($connection));
