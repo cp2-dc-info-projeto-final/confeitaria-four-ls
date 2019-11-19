@@ -90,4 +90,3 @@ qtd INT,
 FOREIGN KEY(id_produto) REFERENCES produto(id_produto),
 FOREIGN KEY(id_venda) REFERENCES venda(id_venda)
 );
-
