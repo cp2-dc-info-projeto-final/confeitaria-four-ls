@@ -4,11 +4,11 @@
     
     $data_venda = $_POST["data_venda"];
     $hora_venda = $_POST["hora_venda"];
-    $id_produto = $_POST["id_produto"];
     $qtd = $_POST["qtd"];
     session_start();
 
-    $id_cliente = $_SESSION["id_cliente"];
+  $id_cliente = $_SESSION["id_cliente"];
+  $id_produto = $_SESSION["id"];
     
         if (criarvenda($id_cliente, $data_venda,$hora_venda)) {
             session_unset();
