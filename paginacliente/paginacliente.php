@@ -107,12 +107,13 @@
 
     </div>
     <br>
-    <br>
-  <center>
+    <center>
       <div>
-        <a href="cardapio/cardapioView.php">Ver mais</a>
+        <h5><a href="cardapio/cardapioView.php">Ver mais...</a><h5>
       </div>
     </center>
+    <br>
+
 
   <!-- Sobre nós  Section -->
   <section class="page-section bg-primary text-white mb-0" id="sobrenos">
@@ -164,6 +165,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
             <h5 class="text-uppercase mb-4">confeitariafourls@gmail.com</h5>
+            <h5 class="text-uppercase mb-4"> (21) 96452-8193</h5>
         </div>
       </div>
       </center>
