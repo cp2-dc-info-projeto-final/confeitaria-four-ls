@@ -7,7 +7,7 @@
     if (fazerlogin($email, $senha) == true) {
         session_unset();
         $_SESSION["nome"] = $row["nome"]; 
-        header("Location: ../paginacliente/paginacliente.html");
+        header("Location: ../paginacliente/paginacliente.php");
         exit();
     }
     else {
