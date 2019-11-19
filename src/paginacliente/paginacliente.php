@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){ 
+
+  ?>
 <!DOCTYPE html>
 <html lang="br">
 
@@ -221,3 +226,7 @@
 </body>
 
 </html>
+<?php
+} else {echo '<html><title>ERRO!</title><h1><p style=\'color:black;\'>Você não pode acessar esta página!!!</p></h1></html>';}
+
+?>

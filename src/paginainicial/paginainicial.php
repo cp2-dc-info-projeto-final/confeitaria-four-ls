@@ -107,7 +107,7 @@
 
   <center>
       <div>
-        <h5><a href="cardapio/cardapioView.php">Ver mais...</a><h5>
+        <h5><a href="../paginainicial/cardapioinicial.php">Ver mais...</a><h5>
       </div>
     </center>
    

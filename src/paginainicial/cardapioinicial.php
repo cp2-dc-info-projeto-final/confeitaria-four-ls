@@ -99,7 +99,7 @@
         </tr>
   <?php 
 
-    require_once "cardapioCtrl.php";
+    require_once "../paginacliente/cardapio/cardapioCtrl.php";
 
     $produtos = buscarProdutosCtrl();
 

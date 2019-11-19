@@ -46,6 +46,11 @@ session_start();
       }         
            
     ?>
+    <?php 
+session_start();
+if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){ 
+
+  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -198,19 +203,16 @@ session_start();
         }
             ?>
         
-<<<<<<< HEAD
+
         
             <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioView.php" value="Continuar comprando">
             </td>
-=======
+
             <tr>
-              <td>
-                <a href="../cardapio/cardapioView.php"> Continuar Comprando </a>
-              </td>
               <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../venda.php" value="Concluir encomenda">
               </td>
             </tr>
->>>>>>> 02affde38b491b0868f4671582216dfa3d5a17d0
+
     </tfoot>
         </form>
     </form>
@@ -218,3 +220,7 @@ session_start();
         </div>
     </body>
 </html>
+<?php
+} else {echo '<html><title>ERRO!</title><h1><p style=\'color:black;\'>Você não pode acessar esta página!!!</p></h1></html>';}
+
+?>

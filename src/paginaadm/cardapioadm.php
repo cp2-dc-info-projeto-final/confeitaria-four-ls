@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+if (isset($_SESSION['admin']) && $_SESSION['admin']==true){ 
+
+  ?>
+  <!DOCTYPE html>
 <html lang="br">
 
 <head>
@@ -36,7 +41,7 @@
           </li>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../paginainicial/paginainicial.php">Sair da Conta</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sair.php">Sair da Conta</a>
           </li>
         </div>
     </nav>
@@ -82,3 +87,6 @@
     </div>
 
 </html>
+<?php
+} else {echo '<html><title>ERRO!</title><h1><p style=\'color:black;\'>Você não pode acessar esta página!!!</p></h1></html>';}
+?>

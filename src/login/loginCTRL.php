@@ -8,16 +8,13 @@
         session_unset();
         session_start();
         $_SESSION["nome"] = $row["nome"]; 
-<<<<<<< HEAD
         $_SESSION["admin"]= administrador($email);
         if ($_SESSION["admin"]==true){
         header("Location: ../paginaadm/cardapioadm.php");
         } else if ($_SESSION["admin"]==false){
             header("Location: ../paginacliente/paginacliente.php");
         }
-=======
-        header("Location: ../paginacliente/paginacliente.php");
->>>>>>> 02affde38b491b0868f4671582216dfa3d5a17d0
+
         exit();
     }
     
