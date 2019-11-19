@@ -205,7 +205,7 @@ session_start();
         }
             ?>
         
-            <tr>
+        
             <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioView.php" value="Continuar comprando">
             </td>
     </tfoot>
