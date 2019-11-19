@@ -47,8 +47,7 @@ session_start();
            
     ?>
     <?php 
-session_start();
-if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){ 
+if (isset($_SESSION['admin']) && $_SESSION['admin']==false){ 
 
   ?>
 <!DOCTYPE html>

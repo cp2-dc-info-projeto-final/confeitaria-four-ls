@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){ 
+
 
   ?>
 <!DOCTYPE html>
@@ -116,7 +116,7 @@ if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){
     <br>
     <center>
       <div>
-        <h5><a href="../cardapio/cardapioView.php">Ver mais...</a><h5>
+        <h5><a href="cardapio/cardapioViewcliente.php">Ver mais...</a><h5>
       </div>
     </center>
     <br>
@@ -226,7 +226,3 @@ if (isset($_SESSION['cliente']) && $_SESSION['cliente']==true){
 </body>
 
 </html>
-<?php
-} else {echo '<html><title>ERRO!</title><h1><p style=\'color:black;\'>Você não pode acessar esta página!!!</p></h1></html>';}
-
-?>
