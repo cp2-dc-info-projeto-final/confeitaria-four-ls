@@ -62,8 +62,8 @@ FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 DROP TABLE IF EXISTS carrinho;
 CREATE TABLE carrinho(
 id_carrinho INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(50),
-nomepro INT,
+cpf VARCHAR(50),
+nomepro VARCHAR (50),
 qtd INT,
 precof FLOAT
 );
