@@ -40,23 +40,19 @@
 
 1. O cliente escolhe um produto exibido.
 
-2. O cliente escolhe o tamanho do produto.
-
-3. O cliente escolhe o sabor.
-
-4. O cliente escolhe o complemento.
-
-5. O cliente escolhe a quantidade.
-
-6. O sistema registra as escolhas.
-
-**Fluxo alternativo:**
-
-2. O cliente escolhe o tamanho do produto.
+2. O cliente o adiciona ao carrinho
 
 3. O cliente escolhe a quantidade.
 
-4. O sistema registra o produto escolhido.
+4. O sistema registra as escolhas.
+
+**Fluxo alternativo:**
+
+2. O cliente eescolhe o produto
+
+3. O cliente escolhe a quantidade.
+
+4. O sistema nào faz o registro.
    
 ## CDU 03 – Finalizar pedido
 
