@@ -6,7 +6,7 @@ Ao entrar no site da CONFEITARIA FOUR'LS o usuario verá nosso lindo logo,além 
 
 Rolando nossa página inicial o usuário poderá ver nosso maravilhoso cardapio,um pouco mais de nossa história,endereço e alguns dos modos de entar em contato conosco.
 
-![Página inicial](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/tela-inicio.png)
+![Página inicial](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/tela-inicio.png)
 
 
 ## se cadastrando
