@@ -69,7 +69,7 @@ Após isso,basta clicar em "meu carrinho",conferir seus itens e por a quantidade
 
 E pronto,basta confirmar o pedido que prepararemos!
 
-![Carrinho(https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/carrinho.png)
+![Carrinho](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/carrinho.png)
 
 ## Sobre nós
 
