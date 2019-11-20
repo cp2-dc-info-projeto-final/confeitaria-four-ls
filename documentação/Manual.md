@@ -17,7 +17,7 @@ Ao clicar ele será redirecionado para a página de login,página esta que ele u
 
 No canto inferior direito o usuário verá a seguinte mensagem "Cadastre-se agora mesmo".
 
-![login](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/login.png)
+![login](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/login.png)
 
 Ele deverá clicar ali.Assim sendo redirecionado para nossa página de cadastro.
 
@@ -27,7 +27,7 @@ Assim,basta clicar em "concluir meu cadastro" e pronto.
 
 Caadastro feito.
 
-![Cadastro](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/Cadastro.png)
+![Cadastro](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/Cadastro.png)
 
 ## Como logar
 
@@ -37,7 +37,15 @@ Basta clicar em login,no canto superior direito da barra de menu e inserir e-mai
 
 Pronto.
 
-![login](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/login.png)
+![login](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/login.png)
+
+## Entrar na sua página
+
+Após logar,o cliente poderá ter acesso a sua própria página.
+
+No canto superior esquerdo,ele poderá ver "meu carrinho" lugar onde,ao escolher algum produto para comprar,armazenará suas escolhas e quantidades.
+
+![Página cliente](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/tela%20inicial%20cliente.png)
 
 ## Ver nosso cardapio
 
@@ -51,7 +59,17 @@ ou
 
 2. O usuário pode rolar a página para baixo,e logo verá o cardapio.
 
-![Cardapio]()
+![Cardapio](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/tela%20inicial%20cliente.png)
+
+## Carrinho
+
+Para selecionar algum produto que queira comprar basta clicar em "adicionar ao carrinho".
+
+Após isso,basta clicar em "meu carrinho",conferir seus itens e por a quantidade.
+
+E pronto,basta confirmar o pedido que prepararemos!
+
+![Carrinho(https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/carrinho.png)
 
 ## Sobre nós
 
@@ -65,7 +83,7 @@ ou
 
 2. Rolando a página para baixo.
 
-![Sobre nós](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/Sobre-nos.png) 
+![Sobre nós](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/Sobre-nos.png) 
 
 ## Contato 
 
@@ -73,4 +91,4 @@ Para saber mais sobre nosso endereço e redes sociais, basta ir em "Fale conosco
 
 Além disso,no final da página você pode encontrar nosso endereço.
 
-![Contato](https://raw.githubusercontent.com/cp2-dc-info-projeto-final/confeitaria-four-ls/master/prints/contato.png) 
+![Contato](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Telas/contato.png) 
