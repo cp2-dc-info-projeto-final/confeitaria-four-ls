@@ -65,8 +65,6 @@ DROP TABLE IF EXISTS venda;
 CREATE TABLE venda(
 id_venda INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 id_cliente INT,
-data_venda DATE,
-hora_venda TIME,
 FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente)
 );
 DROP TABLE IF EXISTS produto_venda;
