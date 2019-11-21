@@ -28,12 +28,12 @@
 
  # Casos de uso 
 
- +  [Casos de uso](casos-de-uso.md)
+ +  [Casos de uso](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/casosDeUso.md)
  +  [ Diagrama de casos de uso](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Diagrama%20de%20casos%20de%20uso.png)
  + Diagrama de casos de uso-editavel
 
  # Modelagem
- + Diagrama de classes
+ + [Diagrama de classes](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Diagrama%20de%20classes.png)
  + Diagrama de Banco de dados
  + Link para script `schema.sql`
 
