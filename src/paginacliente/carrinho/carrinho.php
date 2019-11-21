@@ -99,6 +99,10 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#faleconosco">Fale conosco</a>
               </li>
+              <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../sair.php">Sair da Conta</a>
+          </li>
          
         </ul>
       </div>
