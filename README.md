@@ -30,7 +30,7 @@
 
  +  [Casos de uso](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Untitled%20Diagram%20(3).html)
  +  [ Diagrama de casos de uso](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeCasosDeUso.png)
- + [Diagrama de casos de uso-editavel](https://github.com/Larabms/Confeitaria-Four-L-s/blob/master/Diagrama%20editavel.html)
+ + [Diagrama de casos de uso-editavel](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/diagramaDeCasosDeUsoEditavel.html)
 
  # Modelagem
  + [Diagrama de classes](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeClasses.png)
