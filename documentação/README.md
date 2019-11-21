@@ -42,4 +42,4 @@
  
  # Slides
 
- + [Slides](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/Slides.pdf)
+ + [Slides](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Slides.pdf)

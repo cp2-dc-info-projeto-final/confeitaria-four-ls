@@ -4,7 +4,7 @@
 - [CDU 01 – Fazer cadastro](#cdu-01---Fazer-cadastro)
 - [CDU 02 – Escolher produto](#cdu-02---Escolher-produto)
 - [CDU 03 – Finalizar pedido](#cdu-03---Finalizar-pedido)
-- [CDU 04 – Alterar pedido](#cdu-04---Cancelar-pedido)
+- [CDU 04 – Cancelar pedido](#cdu-04---Cancelar-pedido)
 - [CDU 05 – Fazer login](#cdu-05---Fazer-login)
 - [CDU 06 – Ter acesso aos nossos doces](#cdu-06---Ter-acesso-aos-nossos-doces)
 - [CDU 07 - Adicionar um novo produto](#cdu-07---Adicionar-algo-ao-cardapio)
@@ -130,8 +130,5 @@
 2. Ao se direcionar haverá uma lista com todos os produtos.
 3. Ao lado de cada um,haverá o botão "exluir".
 4. Ao aperta-lo aparecerá uma mensagem de confirmacão de exclusão.
-<<<<<<< HEAD
 5. Ao confirmar,o item será excluido.
-=======
-5. Ao confirmar,o item será excluido.
->>>>>>> ed4f0393e768ac3cf27f29c5610f39bb0f30c2c5
+
