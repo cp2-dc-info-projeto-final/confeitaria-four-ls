@@ -1,7 +1,7 @@
 <?php
 function cadastro($nomepro, $imagem, $preco, $descricao){
     $conn = mysqli_connect("localhost", "root", "", "confeitariafourls");
-    $sql="INSERT INTO produto(nomepro, imagem, preco, descricao) VALUES ('$nomepro', '$imagem', '$preco', '$descricao')";
+    $sql="INSERT INTO produto(nomepro, imagem, preco, descricao, visible) VALUES ('$nomepro', '$imagem', '$preco', '$descricao', 1)";
     if(!mysqli_query($conn, $sql)) {
         die("Erro $sql. " . mysqli_error($conn));
     } 

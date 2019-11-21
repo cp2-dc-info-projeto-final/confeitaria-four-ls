@@ -12,10 +12,10 @@
   <title>Confeitaria Four'ls</title>
 
   <!-- Custom fonts for this theme (botar link css quando estiver pronto)-->
-  <link href="cardapio.css" rel="stylesheet" type="text/css">
+  <link href="cardapioadm.css" rel="stylesheet" type="text/css">
 
   <!-- Theme CSS -->
-  <link href="../paginacliente/cardapio/cardapio.css" rel="stylesheet">
+  <link href="cardapioadm.css" rel="stylesheet">
 <style>
 .tabela{
   text-align: center;
@@ -43,16 +43,7 @@
           <img class="logo" src="logo.png" height="100" width="100"> 
           <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
           <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#sobrenos">Sobre nós</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#faleconosco">Fale conosco</a>
-              </li>
             
-         
-        </ul>
       </div>
     </div>
   </nav>
@@ -93,8 +84,7 @@
         </tr>
   <?php 
 
-    require_once  "pinicialCTRL.php";
-
+    require "../paginainicial/pinicialCTRL.php";
 
     foreach($produto as $produto){
   ?>
@@ -113,13 +103,18 @@
         <td>
           <?php echo "R$ " . number_format($produto['preco'],2,",",".") ?>
         </td>
-        
+        <td>
+      <input class="excluir"  type="button" onclick="window.location.href='Adm_Ctrl.php?id=<?php echo $produto['id_produto']?>'"  value="Excluir produto"> 
+      </td>
       </tr>
+      
   <?php    
       }  
   ?>
 
   </table>
+
+  
   </div>
   
 
@@ -134,3 +129,4 @@
 </div>
 </div>
 </html>
+

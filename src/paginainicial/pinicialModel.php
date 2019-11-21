@@ -4,7 +4,7 @@
 function pegafotos(){
      $i=0;
     $conn = mysqli_connect("localhost", "root", "", "confeitariafourls");
-    $sql=("SELECT * FROM produto");
+    $sql=("SELECT * FROM produto WHERE visible=1");
     if(!mysqli_query($conn, $sql)) {
         die("Erro $sql. " . mysqli_error($conn));
     } 
@@ -22,4 +22,23 @@ function pegafotos(){
     
 }
 
+    require_once "../connection.php";
+    function buscarProdutos() {
+        $conexao = getConnection();
+
+        $select = $conexao->prepare("SELECT id_produto, nomepro, descricao, preco, imagem FROM produto WHERE visible=1");
+        $select->execute();
+
+
+        if ($select) {
+            $fetch = $select->fetchAll();
+            return $fetch;
+        } else {
+            die($select->errorInfo());
+        }
+
+        return null;
+   
+    }
+?>
 

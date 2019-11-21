@@ -1,10 +1,10 @@
 <?php
 
-    require_once "../paginacliente/carrinho/connection.php";
+    require_once "../../connection.php";
     function buscarProdutos() {
         $conexao = getConnection();
 
-        $select = $conexao->prepare("SELECT id_produto, nomepro, descricao, preco, imagem FROM produto");
+        $select = $conexao->prepare("SELECT id_produto, nomepro, descricao, preco, imagem FROM produto WHERE visible=1");
         $select->execute();
 
 

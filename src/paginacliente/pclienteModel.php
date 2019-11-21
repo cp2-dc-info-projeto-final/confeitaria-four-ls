@@ -3,7 +3,7 @@
 function pegafotos(){
      $i=0;
     $conn = mysqli_connect("localhost", "root", "", "confeitariafourls");
-    $sql=("SELECT * FROM produto");
+    $sql=("SELECT * FROM produto WHERE visible=1");
     if(!mysqli_query($conn, $sql)) {
         die("Erro $sql. " . mysqli_error($conn));
     } 
