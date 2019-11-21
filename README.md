@@ -36,7 +36,7 @@
  + [Diagrama de classes](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeClasses.png)
  + [Diagrama de classes-editavel](https://github.com/Larabms/Confeitaria-Four-L-s/blob/master/Diagrama%20editavel.html)
  + [Diagrama de Banco de dados](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeBancoDeDados.png)
- + [Diagrama de banco de dados-editavel](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Untitled%20Diagram%20(1).html)
+ + [Diagrama de banco de dados-editavel](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/Untitled%20Diagram%20(1).html)
  + [Link para script](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/schema.sql) 
 
 # Manual de utilização
