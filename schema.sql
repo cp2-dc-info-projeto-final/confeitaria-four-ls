@@ -7,7 +7,7 @@ senha VARCHAR(255),
 email VARCHAR (50) NOT NULL
 );
 DROP TABLE IF EXISTS cliente;
-CREATE TABLE cliente(
+CREATE TABLE cliente(       
 id_cliente INT NOT NULL PRIMARY KEY,
 nome VARCHAR (50),
 cpf VARCHAR (11),
@@ -55,9 +55,14 @@ FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 DROP TABLE IF EXISTS carrinho;
 DROP TABLE IF EXISTS produto_carrinho;
 DROP TABLE IF EXISTS venda;
+
+
 CREATE TABLE venda(
 id_venda INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 id_produto INT,
+data_venda DATE,
+id_cliente INT,
+FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
 FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
 );
 DROP TABLE IF EXISTS produto_venda;
@@ -70,4 +75,9 @@ FOREIGN KEY(id_venda) REFERENCES venda(id_venda)
 );
 
 
+SELECT cliente.nome, cliente.telefone, produto.nomepro, produto.preco, venda.data_venda, produto_venda.qtd
+FROM cliente
+JOIN venda on cliente.id_cliente = venda.id_cliente  
+JOIN produto_venda	ON produto_venda.id_venda = venda.id_venda
+JOIN produto ON produto.id_produto = produto_venda.id_produto
 
