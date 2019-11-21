@@ -38,7 +38,7 @@
  + [Link para script](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/schema.sql) 
 
 # Manual de utilização
- + [Manual de utilização](Manual.md)  
+ + [Manual de utilização](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Manual.md)  
  
  # Slides
 
