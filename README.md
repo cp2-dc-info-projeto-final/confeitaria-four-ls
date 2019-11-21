@@ -30,11 +30,13 @@
 
  +  [Casos de uso](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/casosDeUso.md)
  +  [ Diagrama de casos de uso](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeCasosDeUso.png)
- + Diagrama de casos de uso-editavel
+ + [Diagrama de casos de uso-editavel](https://github.com/Larabms/Confeitaria-Four-L-s/blob/master/Diagrama%20editavel.html)
 
  # Modelagem
  + [Diagrama de classes](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeClasses.png)
+ + [Diagrama de classes-editavel](https://github.com/Larabms/Confeitaria-Four-L-s/blob/master/Diagrama%20editavel.html)
  + [Diagrama de Banco de dados](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeBancoDeDados.png)
+ + [Diagrama de banco de dados-editavel](https://github.com/Larabms/Confeitaria-Four-L-s/blob/master/Diagrama%20de%20banco%20de%20dados.html)
  + [Link para script](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/schema.sql) 
 
 # Manual de utilização
