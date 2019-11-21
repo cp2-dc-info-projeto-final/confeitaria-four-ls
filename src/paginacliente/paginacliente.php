@@ -1,8 +1,4 @@
-<?php 
-session_start();
 
-
-  ?>
 <!DOCTYPE html>
 <html lang="br">
 
@@ -51,6 +47,8 @@ session_start();
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3" href="carrinho/carrinho.php">Meu carrinho</a>
+          </li>
+            <a class="nav-link py-3 px-0 px-lg-3" href="../sair.php">Sair</a>
           </li>
         </ul>
       </div>
