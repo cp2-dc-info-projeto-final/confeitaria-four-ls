@@ -34,7 +34,7 @@
 
  # Modelagem
  + [Diagrama de classes](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/diagramaDeClasses.png)
- + Diagrama de Banco de dados
+ + [Diagrama de Banco de dados](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Diagrama%20de%20banco%20de%20dados.png)
  + [Link para script](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/schema.sql) 
 
 # Manual de utilização
