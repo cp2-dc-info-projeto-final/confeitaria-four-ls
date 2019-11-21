@@ -18,13 +18,13 @@
 
  + O site da confeitaria Four'ls tem como proposta possibilitar que nossos clientes possam,de maneira fácil e rápida,ter acesso a todos os doces que confeitamos,saber mais de nossa história e fazer encomendas.
  + Steakholder: Rosane Barroso 
- + [Proposta](proposta.md)
+ + [Proposta](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/proposta.md)
 
  # Requisitos
 
- + [Requisitos](Requisitos.md)
- + [Entrevista](entrevista.md)
- + [Áudio da entrevista](Entrevista.mp4)
+ + [Requisitos](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/Requisitos.md)
+ + [Entrevista](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/entrevista.md)
+ + [Áudio da entrevista](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/Entrevista.mp3)
 
  # Casos de uso 
 
@@ -35,10 +35,10 @@
  # Modelagem
  + [Diagrama de classes](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documenta%C3%A7%C3%A3o/Diagrama%20de%20classes.png)
  + Diagrama de Banco de dados
- + Link para script `schema.sql`
+ + [Link para script `schema.sql`](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/schema.sql)
 
 # Manual de utilização
- + [Manual de utilização](Manual.md)  
+ + [Manual de utilização](https://github.com/cp2-dc-info-projeto-final/confeitaria-four-ls/blob/master/documentação/Manual.md)  
  
  # Slides
 
