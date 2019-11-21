@@ -10,8 +10,8 @@ DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
 id_cliente INT NOT NULL PRIMARY KEY,
 nome VARCHAR (50),
+cpf VARCHAR (11)
 sexo VARCHAR (10),
-DDD VARCHAR (2),
 telefone VARCHAR (11),
 endereco VARCHAR (100),
 cidade VARCHAR (50),
@@ -52,24 +52,11 @@ id_produto INT,
 FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );
 DROP TABLE IF EXISTS carrinho;
-CREATE TABLE carrinho(
-id_carrinho INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-id_produto INT,
-valor_total FLOAT
-);
 DROP TABLE IF EXISTS produto_carrinho;
-CREATE TABLE produto_carrinho(
-id_carrinho INT,
-id_produto INT,
-FOREIGN KEY(id_produto) REFERENCES produto(id_produto),
-FOREIGN KEY(id_carrinho) REFERENCES carrinho (id_carrinho)
-);
 DROP TABLE IF EXISTS venda;
 CREATE TABLE venda(
 id_venda INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 id_produto INT,
-data_venda DATE,
-hora_venda TIME,
 FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
 );
 DROP TABLE IF EXISTS produto_venda;
