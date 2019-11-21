@@ -56,7 +56,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title><?php echo $titulos; ?></title>
+        <title>Meu carrinho</title>
         <link rel="stylesheet" type="text/css" href="carrinho.css"/>
         <style>
         #cpf{
@@ -91,7 +91,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioView.php">Cardápio</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioViewcliente.php">Cardápio</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#sobrenos">Sobre nós</a>
@@ -205,7 +205,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
         
 
         
-            <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioView.php" value="Continuar comprando">
+            <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioViewcliente.php" value="Continuar comprando">
             </td>
 
             <tr>

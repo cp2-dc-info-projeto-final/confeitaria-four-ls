@@ -26,6 +26,8 @@ nome VARCHAR(50),
 FOREIGN KEY(id_admin) REFERENCES usuario(id)
 );
 
+INSERT INTO administrador (id_admin, nome) VALUES (1, 'Rosane Barroso da Silva');
+
 
 DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
@@ -75,9 +77,4 @@ FOREIGN KEY(id_venda) REFERENCES venda(id_venda)
 );
 
 
-SELECT cliente.nome, cliente.telefone, produto.nomepro, produto.preco, venda.data_venda, produto_venda.qtd
-FROM cliente
-JOIN venda on cliente.id_cliente = venda.id_cliente  
-JOIN produto_venda	ON produto_venda.id_venda = venda.id_venda
-JOIN produto ON produto.id_produto = produto_venda.id_produto
 
