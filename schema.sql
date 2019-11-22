@@ -24,8 +24,7 @@ id_admin INT NOT NULL PRIMARY KEY,
 FOREIGN KEY(id_admin) REFERENCES usuario(id)
 );
 
-INSERT INTO usuario (nome, senha, email) VALUES 
-('Fulaninho Adm do Poder', 'hash', 'adm@fourls.com');
+INSERT INTO usuario (nome, senha, email) VALUES ('Rosane Barroso da Silva', '$2y$10$4r1dWER//o7Pzpv2bm76RuKoFrN0HhtW/IYW8hbEtsWY95MEkbVe.', 'prabsilva@gmail.com');
 INSERT INTO administrador (id_admin) VALUES (1);
 
 
