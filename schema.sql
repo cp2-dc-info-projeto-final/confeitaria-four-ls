@@ -9,7 +9,6 @@ email VARCHAR (50) NOT NULL
 DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(       
 id_cliente INT NOT NULL PRIMARY KEY,
-nome VARCHAR (50),
 cpf VARCHAR (11),
 sexo VARCHAR (10),
 telefone VARCHAR (11),
@@ -22,11 +21,12 @@ FOREIGN KEY(id_cliente)REFERENCES usuario(id)
 DROP TABLE IF EXISTS administrador;
 CREATE TABLE administrador(
 id_admin INT NOT NULL PRIMARY KEY,
-nome VARCHAR(50),
 FOREIGN KEY(id_admin) REFERENCES usuario(id)
 );
 
-INSERT INTO administrador (id_admin, nome) VALUES (1, 'Rosane Barroso da Silva');
+INSERT INTO usuario (nome, senha, email) VALUES 
+('Fulaninho Adm do Poder', 'hash', 'adm@fourls.com');
+INSERT INTO administrador (id_admin) VALUES (1);
 
 
 DROP TABLE IF EXISTS produto;
