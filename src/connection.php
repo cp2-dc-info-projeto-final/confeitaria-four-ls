@@ -10,3 +10,8 @@
     return new PDO('mysql:host=localhost;dbname=confeitariafourls;charset=utf8',"root","");
 
  }
+  function getconnectmsq(){
+   
+   return mysqli_connect("localhost", "root", "", "confeitariafourls");
+  }
+?>

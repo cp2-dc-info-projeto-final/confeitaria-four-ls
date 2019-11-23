@@ -41,7 +41,7 @@
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
-          <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
+          <a class="navbar-brand js-scroll-trigger" href="paginainicial.php">Confeitaria Four'ls</a>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">

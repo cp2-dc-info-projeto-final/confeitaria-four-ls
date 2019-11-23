@@ -56,23 +56,21 @@ FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 DROP TABLE IF EXISTS carrinho;
 DROP TABLE IF EXISTS produto_carrinho;
 DROP TABLE IF EXISTS venda;
-
-
 CREATE TABLE venda(
 id_venda INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-id_produto INT,
 data_venda DATE,
 id_cliente INT,
-FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
-FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
+total FLOAT,
+FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 DROP TABLE IF EXISTS produto_venda;
 CREATE TABLE produto_venda(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
 id_venda INT,
 id_produto INT,
 qtd INT,
-FOREIGN KEY(id_produto) REFERENCES produto(id_produto),
-FOREIGN KEY(id_venda) REFERENCES venda(id_venda)
+FOREIGN KEY(id_venda) REFERENCES venda(id_venda),
+FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
 );
 
 

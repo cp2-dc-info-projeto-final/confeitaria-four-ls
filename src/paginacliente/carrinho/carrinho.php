@@ -131,8 +131,6 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
          Preencha os campos abaixo para efetivar a compra.</h3>
       </center>
         <table class="tabela-carrinho">
-    <form name="carrinho" method="post" action="carrinhoCTRL.php">
-  
     <thead>
     
           <tr>
@@ -150,8 +148,8 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
               if(count($_SESSION['carrinho']) == 0){
                 echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
               }else{
-                $total = 0;
                 $conexao = getConnection();
+                $total = 0;
                 foreach($_SESSION['carrinho'] as $id => $qtd){
                       try {
                         $sql   = "SELECT id_produto, nomepro, descricao, preco, imagem FROM produto WHERE id_produto = :id_produto";
@@ -192,6 +190,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
                             <td>R$ '.$total.'</td>
                       </tr>';
               }
+              $_SESSION["total"] = $total;
         ?>
 
      </tbody>
@@ -202,14 +201,11 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
             echo "<br><b>$erro</b>";
         }
             ?>
-        
-
-        
-            <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../cardapio/cardapioViewcliente.php" value="Continuar comprando">
-            </td>
-
             <tr>
-              <td colspan="5"><input name="continuar" id="cont"required="required" type="submit" href="../venda.php" value="Concluir encomenda">
+            <td><button class="linkback"><a style="color: black" href="../cardapio/cardapioViewcliente.php" class="color-white">Continuar comprando</a></button></td>
+            </tr>
+            <tr>
+              <td><button class="linkback"><a style="color: black" href="finalizar.php" class="color-white">Finalizar Compra</a></button>
               </td>
             </tr>
 
