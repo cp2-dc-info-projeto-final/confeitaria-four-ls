@@ -47,7 +47,7 @@ session_start();
            
     ?>
     <?php 
-if (isset($_SESSION['admin']) && $_SESSION['admin']==false){ 
+/*if (isset($_SESSION['admin']) && $_SESSION['admin']==false){*/ 
 
   ?>
 <!DOCTYPE html>
@@ -201,22 +201,34 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==false){
             echo "<br><b>$erro</b>";
         }
             ?>
-            <tr>
+            
+    </tfoot>
+        </form>
+    </form>
+            </table>
+        </div>
+        <center>
+        <tr>
             <td><button class="linkback"><a style="color: black" href="../cardapio/cardapioViewcliente.php" class="color-white">Continuar comprando</a></button></td>
             </tr>
             <tr>
               <td><button class="linkback"><a style="color: black" href="finalizar.php" class="color-white">Finalizar Compra</a></button>
               </td>
             </tr>
+            </center>
 
-    </tfoot>
-        </form>
-    </form>
-            </table>
-        </div>
+          
+        
+
     </body>
+    <br>
+    <br>
+  <footer class="footer text-center">
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+      <h4 class="text-uppercase mb-4">Localização</h4>
+      <p class="lead mb-0">Rua Caviana
+      <br>396, casa 7 - Taquara,JPA</p>
+  </div>
 </html>
-<?php
-} else {echo '<html><title>ERRO!</title><h1><p style=\'color:black;\'>Você não pode acessar esta página!!!</p></h1></html>';}
-
-?>

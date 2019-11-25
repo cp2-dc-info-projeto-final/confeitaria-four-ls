@@ -16,12 +16,20 @@
   <link href="pedido.css" rel="stylesheet" type="text/css">
 
   <!-- Theme CSS -->
-  <link href="cardapioadm.css" rel="stylesheet">
+  <link href="pedido.css" rel="stylesheet">
  <style>
  .button{
    background-color:#e65786;
  }
+ .tabela{
+ text-align: center;
+  margin: 100px;
+          border: 3px solid black;
+          width: 80%;
+          height: 40px;
+ }
  </style>
+ 
 </head>
 
 <body id="page-top">
@@ -34,24 +42,54 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioView.php">Visualizar cardápio</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../viewadm.php">Visualizar cardápio</a>
           </li>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sair.php">Sair da Conta</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapioadm.php">Adicionar produtos</a>
+          </li>
+          <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../sair.php">Sair da Conta</a>
           </li>
         </div>
     </nav>
+    <div style="display: block; margin: 200px;">
+
+  <table class="tabela">
+        <tr>
+          <th>
+            Nomes:
+          </th>
+          <th>
+            Telefones:
+          </th>
+          <th>
+            Endereço:
+            </th>
+          <th>
+            Produtos:
+          </th>
+          <th>
+            Preços:
+            </th>
+          <th>
+            Quantidade:
+          </th>
+          <th>
+          Data da venda:
+          </th>
+        </tr>
  
  <?php
-require "viewpedidoscontrol.php";
+require_once "viewpedidoscontrol.php";
 
 $pedidos = buscapedidos();
 
 foreach($pedidos as $pedido){
   ?>
 
-
+        
       <tr>
         <td>
           <?php echo $pedido['nome']; ?>
@@ -60,22 +98,28 @@ foreach($pedidos as $pedido){
           <?php echo $pedido['telefone']; ?>
         </td>
         <td>
+          <?php echo $pedido['endereco']; ?>
+        </td>
+        <td>
           <?php echo $pedido['nomepro']; ?>
         </td>
         <td>
           <?php echo "R$ " . number_format($pedido['preco'],2,",",".") ?>
         </td>
         <td>
-          <?php echo number_format($pedido['data_venda'],2,",",".") ?>
+          <?php echo $pedido['qtd']; ?>
         </td>
         <td>
-          <?php echo number_format($pedido['qtd'],2,",",".") ?>
+          <?php echo $pedido['data_venda']; ?>
         </td>
       </tr>
+  
+      
   <?php    
       }  
   ?>
-
+  </table>
+</div>
 
 
 </body>

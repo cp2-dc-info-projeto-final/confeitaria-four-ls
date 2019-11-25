@@ -113,6 +113,10 @@
         <td>
           <?php echo "R$ " . number_format($produto['preco'],2,",",".") ?>
         </td>
+        <td>
+          <a href="../login/loginview.php?acao=add&id_produto=<?php echo  $produto['id_produto']?>">Adicionar ao carrinho</a> 
+          
+        </td>
         
       </tr>
   <?php    
