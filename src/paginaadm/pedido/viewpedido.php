@@ -1,8 +1,5 @@
-<?php 
-session_start();
-if (isset($_SESSION['admin']) && $_SESSION['admin']==true){ 
 
-  ?>
+
   <!DOCTYPE html>
 <html lang="br">
 
@@ -16,7 +13,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']==true){
   <title>Confeitaria Four'ls</title>
 
   <!-- Custom fonts for this theme (botar link css quando estiver pronto)-->
-  <link href="cardapioadm.css" rel="stylesheet" type="text/css">
+  <link href="pedido.css" rel="stylesheet" type="text/css">
 
   <!-- Theme CSS -->
   <link href="cardapioadm.css" rel="stylesheet">
@@ -52,7 +49,36 @@ require "viewpedidoscontrol.php";
 $pedidos = buscapedidos();
 
 foreach($pedidos as $pedido){
+  ?>
 
-?>
 
- 
+      <tr>
+        <td>
+          <?php echo $pedido['nome']; ?>
+        </td>
+        <td>
+          <?php echo $pedido['telefone']; ?>
+        </td>
+        <td>
+          <?php echo $pedido['nomepro']; ?>
+        </td>
+        <td>
+          <?php echo "R$ " . number_format($pedido['preco'],2,",",".") ?>
+        </td>
+        <td>
+          <?php echo number_format($pedido['data_venda'],2,",",".") ?>
+        </td>
+        <td>
+          <?php echo number_format($pedido['qtd'],2,",",".") ?>
+        </td>
+      </tr>
+  <?php    
+      }  
+  ?>
+
+
+
+</body>
+</html>
+
+
