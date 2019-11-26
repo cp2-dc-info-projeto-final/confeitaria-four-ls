@@ -68,6 +68,12 @@
 
     </div>
   </header>
+  <br><br><br><br><br><br>
+  <center>
+ <div>
+ <h3>Os produtos devem ser comprados com 5 dias de antecedência.<h3>
+ </div>
+ </center>
 
   <div style="display: block; margin: 100px;">
 

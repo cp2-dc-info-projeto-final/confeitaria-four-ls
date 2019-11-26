@@ -123,6 +123,8 @@ session_start();
     <div class="interface">
       <br>
       <br>
+      <br>
+      <br>
       <center>
       <caption><h3 class="detalhes">Ótima escolha!</h3></caption>
          <h3>Obrigado por comprar na Confeitaria Four'ls!
@@ -221,8 +223,18 @@ session_start();
               </td>
             </tr>
             </center>
+            
+            
 
-          
+<center>
+<br>
+<br>
+<br>
+          <div>
+          <h4>O pagamento deve ser efetuado no momento da entrega.</h4>
+          </div>
+          </center>
+          <br>
         
 
     </body>

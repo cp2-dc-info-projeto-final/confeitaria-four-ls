@@ -25,7 +25,7 @@ session_start();
   text-align: center;
   margin: 100px;
           border: 3px solid black;
-          width: 80%;
+          width: 90%;
           height: 40px;
 
 }
@@ -76,7 +76,12 @@ session_start();
 
     </div>
   </header>
-
+  <br><br><br><br><br><br>
+  <center>
+ <div>
+ <h3>Os produtos devem ser comprados com 5 dias de antecedência.<h3>
+ </div>
+ </center>
   <div style="display: block; margin: 100px;">
 
   <table class="tabela">
