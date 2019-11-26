@@ -13,7 +13,7 @@
         $_SESSION["id_usuario"] = $usuario["id"]; 
         $_SESSION["admin"]= administrador($email);
         if ($_SESSION["admin"]==true){
-        header("Location: ../paginaadm/cardapioadm.php");
+            header("Location: ../paginaadm/cardapioadm.php");
         } else if ($_SESSION["admin"]==false){
             header("Location: ../paginacliente/paginacliente.php");
         }
