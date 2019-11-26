@@ -4,4 +4,4 @@ set_time_limit(60);
 session_start();
 session_unset();
 session_destroy();
-header("Location: login/loginview.php");
+header("Location: paginainicial/paginainicial.php");
