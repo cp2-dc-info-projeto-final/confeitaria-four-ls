@@ -1,4 +1,5 @@
 USE confeitariafourls;
+DROP TABLE IF EXISTS produto_promo;
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
