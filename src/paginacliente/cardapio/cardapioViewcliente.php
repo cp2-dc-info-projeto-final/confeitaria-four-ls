@@ -46,7 +46,6 @@ session_start();
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
           <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#sobrenos">Sobre nós</a>
@@ -108,7 +107,7 @@ session_start();
   ?>
 
 
-      <tr>
+      <tr id="cardapio_<?php echo $produto['id_produto'];?>">
         <td>
           <img class= "imagem" src="../../Imagens_Produtos/<?php echo $produto['id_produto'];?>/<?php echo $produto['imagem'];?>"  />
         </td>

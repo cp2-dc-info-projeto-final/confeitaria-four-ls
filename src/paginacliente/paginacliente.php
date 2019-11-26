@@ -34,10 +34,9 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#cardapio">Cardápio</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="cardapio/cardapioViewcliente.php">Cardápio</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sobrenos">Sobre nós</a>
@@ -75,6 +74,14 @@
 
     </div>
   </header>
+  <br>
+  <br>
+  <br>
+<center>
+<div class="saudacao">
+<h2>Seja bem-vindo! Estamos muito felizes com sua presença!</h2>
+</div>
+</center>
 
   <!-- Cardápio Section (teremos que alterar os links [acho] das imagens dependendo do aparelho que vamos utilizar)-->
   <section class="page-section cardapio" id="cardapio">
@@ -101,7 +108,7 @@
    REQUIRE "pclienteCTRL.php";
   foreach ($produtos as $produto ) {
     
-    echo "<img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/>";
+    echo "<a href='cardapio/cardapioViewcliente.php#cardapio_" . $produto['id_produto'] . "'><img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/></a>";
   };
  ?>
 
@@ -114,7 +121,7 @@
     <br>
     <center>
       <div>
-        <h5><a href="cardapio/cardapioViewcliente.php">Ver mais...</a><h5>
+        <h2><a href="cardapio/cardapioViewcliente.php">Ver mais...</a><h2>
       </div>
     </center>
     <br>

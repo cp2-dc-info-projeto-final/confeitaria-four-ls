@@ -40,13 +40,16 @@ visible BOOLEAN NOT NULL
 
 INSERT INTO produto (nomepro, descricao, preco, imagem, visible)
 VALUES ("Bolo de Cenoura", "Delicioso bolo de cenoura com cobertura de chocolate. Rende 10 porções.", 20.00, "bolocenoura.jpg", 1),
- ("Bem Casados", "Preço por unidade",1.20, "bemcasados.jpg", 1),
- ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porçôes",20.00 , "bolodebrigadeiro.jpg", 1),
- ("Pavê", "Rende 6 porções", 15.00 ,"pave.jpg", 1),
- ("Macarons Recheados", "Preço por unidade", 1.50 , "macaronsrecheados.jpg", 1),
- ("CakePop", "Delicioso bolo no palito. Preço por unidade", 1.00 , "cakepop.jpg", 1),
- ("Doces Finos", "Doces finos para festas. Preço por unidade",2.00, "docesfinos.jpg", 1),
- ("Ovo Recheado", "Ovo recheado com chocolate e frutas",30.00 , "ovorecheado.jpg", 1);
+ ("Bem Casados", "Preço por unidade.",1.20, "bemcasados.jpg", 1),
+ ("Bolo de Brigadeiro", "Bolo de chocolate com brigadeiro. Rende 10 porções.",20.00 , "bolodebrigadeiro.jpg", 1),
+ ("Pavê", "Rende 6 porções.", 15.00 ,"pave.jpg", 1),
+ ("Macarons Recheados", "Preço por unidade.", 1.50 , "macaronsrecheados.jpg", 1),
+ ("CakePop", "Delicioso bolo no palito. Preço por unidade.", 1.00 , "cakepop.jpg", 1),
+ ("Doces Finos", "Doces finos para festas. Preço por unidade.",2.00, "docesfinos.jpg", 1),
+ ("Ovo Recheado", "Ovo recheado com chocolate e trufas.",30.00, "ovorecheado.jpg", 1),
+ ("Brigadeiro", "Preço por unidade.", 0.70, "brigadeiro.jpg", 1),
+ ("Panetone", "Deixe seu natal mais delicioso. Panetone Recheado",18.00 , "panetone.jpg", 1),
+ ("Brownie", "Preço por unidade.", 1.50 , "brownie.jpg", 1);
 DROP TABLE IF EXISTS cliente_produto;
 CREATE TABLE cliente_produto(
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

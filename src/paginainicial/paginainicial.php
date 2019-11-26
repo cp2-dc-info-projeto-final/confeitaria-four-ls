@@ -34,10 +34,9 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Confeitaria Four'ls</a>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#cardapio">Cardápio</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="cardapioinicial.php">Cardápio</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sobrenos">Sobre nós</a>
@@ -49,7 +48,6 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../login/loginview.php">Login</a>
           </li>
         </ul>
-      </div>
     </div>
   </nav>
 
@@ -94,10 +92,10 @@
       <div class="row">
         
       <?php
-   include_once "pinicialCTRL.php";
+   REQUIRE "pinicialCTRL.php";
   foreach ($produtos as $produto ) {
     
-    echo "<img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/>";
+    echo "<a href='cardapioinicial.php#cardapio_" . $produto['id_produto'] . "'><img src='../Imagens_Produtos/".$produto['id_produto'] . "/" . $produto['imagem'] . "' id='card'/></a>";
   };
  ?>
       <!-- /.row -->
@@ -107,7 +105,7 @@
 
   <center>
       <div>
-        <h5><a href="cardapioinicial.php">Ver mais...</a><h5>
+        <h2><a href="cardapioinicial.php">Ver mais...</a><h2>
       </div>
     </center>
    

@@ -88,7 +88,6 @@ session_start();
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100"> 
           <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioViewcliente.php">Cardápio</a>
@@ -105,7 +104,6 @@ session_start();
           </li>
          
         </ul>
-      </div>
     </div>
   </nav>
       <!-- Icon Divider -->
@@ -184,13 +182,20 @@ session_start();
 
                       </tr>';
                 }
-                    $total = $total;
-                    echo '<tr>
-                            <td colspan="4">Total</td>
-                            <td>R$ '.$total.'</td>
-                      </tr>';
+                    
+                    if (isset($total))
+                    {
+                      echo '<tr>
+                              <td colspan="4">Total</td>
+                              <td>R$ '.$total.'</td>
+                        </tr>';
+                    }
+                      
               }
-              $_SESSION["total"] = $total;
+              if (isset($total)) {
+                $_SESSION["total"] = $total;
+              }
+              
         ?>
 
      </tbody>

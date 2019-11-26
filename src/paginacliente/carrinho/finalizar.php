@@ -5,7 +5,7 @@ if (isset($_SESSION["id_usuario"])) {
     echo $_SESSION["id_usuario"];
     $idcliente = $_SESSION["id_usuario"];
 } else {
-    header("Location: cadastroview.php");
+    header("Location: ../../login/loginview.php");
 }
 $carrinho = $_SESSION["carrinho"];
 $data = date ("Y-m-d");
@@ -42,6 +42,6 @@ function FinalizarCompra($carrinho, $idcliente, $data, $total){
 
 if(FinalizarCompra($carrinho, $idcliente, $data, $total)) {
     unset($_SESSION["carrinho"]);
-    header("location: ../paginacliente.php");
+    header("location: aviso.php");
 }
 ?>

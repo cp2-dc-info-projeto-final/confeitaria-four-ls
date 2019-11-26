@@ -7,7 +7,6 @@ function buscapedidos() {
          $database = "confeitariafourls";
 
          $conn=mysqli_connect($host, $user, $password, $database );
-         mysqli_set_charset($conn.'utf8');
   $query = ("SELECT usuario.nome, cliente.telefone,cliente.endereco, produto.nomepro, produto.preco, venda.data_venda, produto_venda.qtd FROM usuario JOIN  cliente ON usuario.id=cliente.id_cliente JOIN venda on cliente.id_cliente = venda.id_cliente JOIN produto_venda	ON produto_venda.id_venda = venda.id_venda
  JOIN produto ON produto.id_produto = produto_venda.id_produto");
  $result=mysqli_query($conn, $query);
