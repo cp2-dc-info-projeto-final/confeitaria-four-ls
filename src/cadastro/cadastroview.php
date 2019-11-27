@@ -18,7 +18,9 @@
         </p>
         <p>
 		<label for="cpf">CPF:</label><br>
-          <input id="cpf" name="CPF" required="required" type="text" maxlength="60">
+          <input id="cpf" name="CPF"  type="text" maxlength="60">
+          <br>
+          <span><h5>Campo não obrigatório.</h5></span>
         </p>
         <p>
         <label for="email">Email:</label><br>
@@ -34,7 +36,7 @@
         <p>
         <label for="tel">Telefone:</label><br>
           <input id="tel" name="telefone" required="required" type="text"><br>
-              <span>Apenas números</span>
+              <span><h5>Apenas números</h5></span>
         </p>
         <p>
         <label for="ender">Endereço:</label><br>

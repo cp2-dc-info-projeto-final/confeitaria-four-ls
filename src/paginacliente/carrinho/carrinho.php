@@ -87,20 +87,32 @@ session_start();
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
           <img class="logo" src="logo.png" height="100" width="100">
-<?php  if (isset($_SESSION))  {    ?>           
+<?php  if (isset($_SESSION ["id_usuario"]))  {    ?>           
           <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
 <?php  } else  {    ?>
-          <a class="navbar-brand js-scroll-trigger" href="../paginainicial/paginainicial.php">Confeitaria Four'ls</a>
+          <a class="navbar-brand js-scroll-trigger" href="../../paginainicial/paginainicial.php">Confeitaria Four'ls</a>
 <?php  }    ?>     
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
+              <?php  if (isset($_SESSION ["id_usuario"]))  {    ?>  
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioViewcliente.php">Cardápio</a>
+                <?php  } else  {    ?>
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../paginainicial/cardapioinicial.php">Cardápio</a>
+                <?php  }    ?>  
               </li>
               <li class="nav-item mx-0 mx-lg-1">
+              <?php  if (isset($_SESSION ["id_usuario"]))  {    ?>  
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#sobrenos">Sobre nós</a>
+                <?php  } else  {    ?>
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../paginainicial/paginainicial.php#sobrenos">Sobre nós</a>
+                <?php  }    ?> 
               </li>
               <li class="nav-item mx-0 mx-lg-1">
+              <?php  if (isset($_SESSION ["id_usuario"]))  {    ?>  
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#faleconosco">Fale conosco</a>
+                <?php  } else  {    ?>
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../paginainicial/paginainicial.php#faleconosco">Fale conosco</a>
+                <?php  }    ?> 
               </li>
 <?php  if (!isset($_SESSION))  {    ?>
               <ul class="navbar-nav ml-auto">
@@ -221,7 +233,11 @@ session_start();
         </div>
         <center>
         <tr>
-            <td><button class="linkback"><a style="color: black" href="../cardapio/cardapioViewcliente.php" class="color-white">Continuar comprando</a></button></td>
+        <?php  if (isset($_SESSION ["id_usuario"]))  {    ?>
+            <td>  <button class="linkback"><a style="color: black" href="../cardapio/cardapioViewcliente.php" class="color-white">Continuar comprando</a></button></td>
+              <?php  } else  {    ?>
+                <td>  <button class="linkback"><a style="color: black" href="../../paginainicial/cardapioinicial.php" class="color-white">Continuar comprando</a></button></td>
+                <?php  }    ?> 
             </tr>
             <tr>
               <td><button class="linkback"><a style="color: black" href="finalizar.php" class="color-white">Finalizar Compra</a></button>
