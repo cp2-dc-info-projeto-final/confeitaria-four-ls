@@ -5,9 +5,9 @@
         
     session_start();
     if ($usuario = fazerlogin($email, $senha)) {
-        session_unset();
-        session_destroy();
-        session_start();
+        //session_unset();
+        //session_destroy();
+        //session_start();
         $_SESSION["nome"] = $usuario["nome"];
         $_SESSION["email"] = $usuario["email"]; 
         $_SESSION["id_usuario"] = $usuario["id"]; 

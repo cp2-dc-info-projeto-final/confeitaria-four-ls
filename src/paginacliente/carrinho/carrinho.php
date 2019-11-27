@@ -86,8 +86,12 @@ session_start();
   
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-          <img class="logo" src="logo.png" height="100" width="100"> 
+          <img class="logo" src="logo.png" height="100" width="100">
+<?php  if (isset($_SESSION))  {    ?>           
           <a class="navbar-brand js-scroll-trigger" href="../paginacliente.php">Confeitaria Four'ls</a>
+<?php  } else  {    ?>
+          <a class="navbar-brand js-scroll-trigger" href="../paginainicial/paginainicial.php">Confeitaria Four'ls</a>
+<?php  }    ?>     
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../cardapio/cardapioViewcliente.php">Cardápio</a>
@@ -98,11 +102,12 @@ session_start();
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3" href="../paginacliente.php#faleconosco">Fale conosco</a>
               </li>
+<?php  if (!isset($_SESSION))  {    ?>
               <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../sair.php">Sair da Conta</a>
           </li>
-         
+          <?php  }           ?>
         </ul>
     </div>
   </nav>
