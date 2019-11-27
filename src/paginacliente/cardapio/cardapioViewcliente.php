@@ -79,7 +79,8 @@ session_start();
   <br><br><br><br><br><br>
   <center>
  <div>
- <h3>Os produtos devem ser comprados com 5 dias de antecedência.<h3>
+ <h3>Os produtos devem ser comprados com 10
+ a 15 dias de antecedência.<h3>
  </div>
  </center>
   <div style="display: block; margin: 100px;">

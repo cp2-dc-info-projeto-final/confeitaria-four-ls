@@ -56,6 +56,7 @@
   <div style="display: block; margin: 100px;">
   <h1>Compra Finalizada.</h1>
   <p><h2>Agradecemos a preferência!<h2><p>
+  <p><h2>Seu pedido estara pronto entre 10 a 15 dias!<h2><p>
   </div>
   </center>
   <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
