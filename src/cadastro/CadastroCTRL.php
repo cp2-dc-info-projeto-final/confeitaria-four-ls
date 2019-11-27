@@ -23,7 +23,7 @@
     else{
 
         if (fazercadastro($nome, $cpf, $email, $senha, $confirma_senha, $sexo, $telefone, $cidade, $endereco, $bairro)) {
-            session_unset();
+            //session_unset();
             header("Location: ../login/loginview.php");
             exit();
         } else {
